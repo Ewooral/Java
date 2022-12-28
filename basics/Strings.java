@@ -65,7 +65,8 @@ public class Strings {
         }
 
         // Formatting numeric values as strings
-        Locale locale = new Locale("da", "GH");
+        // Locale locale = new Locale("da", "GH"); deprecated
+        Locale locale = Locale.of("da", "GH");
 
         double doubleV = 1_234_567.89;
 

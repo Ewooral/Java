@@ -1,10 +1,11 @@
+// import java.util.List;
 
 /**
  * An array is a container object that holds a fixed number of values of a
  * single type
  */
 
-public class Arrays {
+public class AArrays {
     public static void main(String[] args) {
         int[] nums = { 1, 3, 4, 2, 0 };
 
