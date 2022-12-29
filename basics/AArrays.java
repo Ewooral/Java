@@ -5,13 +5,28 @@
  * single type
  */
 
-public class AArrays {
+class testArray {
     public static void main(String[] args) {
-        int[] nums = { 1, 3, 4, 2, 0 };
+        AArrays aa = new AArrays();
+        System.out.println(aa.foodNum);
+        System.out.println(aa.FamilySize);
+        aa.getNumLength();
+        aa.dontKnow();
+    }
+}
 
+public class AArrays {
+
+    public int foodNum = 45;
+    public int FamilySize = 11;
+    private int[] nums = { 1, 3, 4, 2, 0 };
+
+    public void getNumLength() {
         // Array length
-        System.out.println(nums.length);
+        System.out.println("Array Length is: " + nums.length);
+    }
 
+    public void dontKnow() {
         // looping thru an array with index
         for (int i = 0; i < nums.length; i++) {
             System.out.println(i + " : " + nums[i]);
@@ -25,13 +40,9 @@ public class AArrays {
             }
             System.out.println("Nums: " + j);
         }
-
-        // calling the school method
-        schools();
-
     }
 
-    static void schools() {
+    public void schools() {
 
         // An array of integers school that takes max input of 5
         int[] school = new int[5];

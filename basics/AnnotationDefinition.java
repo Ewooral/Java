@@ -2,49 +2,14 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
-// annotation
-@VeryImportant
-public class Annotations {
-
-    public static void main(String[] args) {
-
-        // check for the presence of the annotation
-        RunCodes nums = new RunCodes("Mary", 33);
-        if (nums.getClass().isAnnotationPresent(VeryImportant.class)) {
-            System.out.println("This thing is very important");
-        } else {
-            System.out.println("Not very important");
-        }
-
-        nums.setAge(29);
-        System.out.println(nums.getAge());
-
-        // loop thru class, if a method is annotated with RunImmediately, Run it
-        for (Method method : nums.getClass().getDeclaredMethods()) {
-            if (method.isAnnotationPresent(RunImmediately.class)) {
-                try {
-                    method.invoke(nums);
-                } catch (IllegalAccessException | InvocationTargetException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-
-            }
-        }
-    }
-
-}
-
-class RunCodes {
+public class AnnotationDefinition {
     // annotation
     @SuppressWarnings("unused") // this annotation takes the 'unused' parameter
     private String name;
     private int age;
 
-    public RunCodes(String NAME, int AGE) {
+    public AnnotationDefinition(String NAME, int AGE) {
         this.name = NAME;
         this.age = AGE;
     }
@@ -55,7 +20,7 @@ class RunCodes {
     }
 
     // annotation
-    @RunImmediately
+    @VeryImportant
     public int getAge() {
         return this.age;
     }
@@ -64,7 +29,6 @@ class RunCodes {
     public void name() {
         System.out.println("My name is Elijah ");
     }
-
 }
 
 // CREATE CUSTOM ANNOTATIONS
