@@ -79,15 +79,34 @@ public class _HashMap {
         this.eli.put(23, "Eli");
         this.eli.put(34, "Kwame");
         this.eli.put(-9, "Saddick");
-        System.out.println("Eli: " + this.eli);
-        System.out.println();
+        System.out.println(this.eli);
+        System.out.println(eli.containsKey(23));
+        System.out.println(eli.containsValue("Kwame"));
+        System.out.println(eli.containsValue("George"));
+        eli.replace(23, "Eli", "Elijah");
+        eli.putIfAbsent(1, "Kai Havertz");
+        eli.putIfAbsent(1, "CR7");
+        System.out.println(eli);
+        eli.remove(-9);
+        System.out.println(eli);
+
     }
 
     public static void testCode() {
         _HashMap hm = new _HashMap(10, 10);
+
         System.out.println(hm.m);
+        System.out.println("...............");
+
         System.out.println(hm.addNum());
+        System.out.println("...............");
+
         hm.countWords();
+        System.out.println("...............");
+
+        hm.hashMapMethods();
+        System.out.println("...............");
+
     }
 
 }
