@@ -18,7 +18,13 @@ public class AnnotationsTesting {
         for (Method method : nums.getClass().getDeclaredMethods()) {
             if (method.isAnnotationPresent(RunImmediately.class)) {
                 try {
-                    method.invoke(nums);
+
+                    // number of times we invoke the said method
+                    RunImmediately annotation = method.getAnnotation(RunImmediately.class);
+                    for (int i = 0; i < annotation.times(); i++) {
+                        method.invoke(nums);
+                    }
+
                 } catch (IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                 }

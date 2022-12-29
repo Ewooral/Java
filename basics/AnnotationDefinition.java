@@ -26,7 +26,7 @@ public class AnnotationDefinition {
     }
 
     // annotation
-    @RunImmediately
+    @RunImmediately(times = 1)
     public void getLastName() {
         System.out.println("Lastname: " + this.lastname);
     }
@@ -42,13 +42,13 @@ public class AnnotationDefinition {
     }
 
     // annotation
-    @RunImmediately
+    @RunImmediately(times = 2)
     public void getSchoolStatus() {
         System.out.println("school status: " + this.schoolStatus);
     }
 
     // annotation
-    @RunImmediately
+    @RunImmediately(times = 1)
     public void getAddress() {
         System.out.println("Address: " + this.address);
     }
@@ -73,5 +73,7 @@ public class AnnotationDefinition {
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 @interface RunImmediately {
+    // add parameter to annotation
+    int times();
 
 }
