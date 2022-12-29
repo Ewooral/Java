@@ -27,6 +27,8 @@ public class Annotations {
     }
 
     public static void testCodes() {
+
+        // check for the presence of the annotation
         Annotations nums = new Annotations();
         if (nums.getClass().isAnnotationPresent(VeryImportant.class)) {
             System.out.println("This thing is very important");
