@@ -3,21 +3,40 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+// annotation
 @VeryImportant
 public class Annotations {
 
-    // annotations
+    // annotation
     @SuppressWarnings("unused")
-    private static int num;
-    private static int age;
+    private int num;
+    private int age;
 
     public static void main(String[] args) {
-        age = 29;
-        System.out.println(age);
+        testCodes();
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // annotation
+    @VeryImportant
+    public int getAge() {
+        return this.age;
+    }
+
+    public static void testCodes() {
+        Annotations nums = new Annotations();
+        if (nums.getClass().isAnnotationPresent(VeryImportant.class)) {
+            System.out.println("This thing is very important");
+        } else {
+            System.out.println("Not very important");
+        }
     }
 }
 
-// custom annotation
+// CREATE CUSTOM ANNOTATIONS
 /*
  * @Target annotation allows to specify which kind
  * of java element this annotation is valid to be used on
@@ -27,7 +46,7 @@ public class Annotations {
  * through the running of the program so that other code can use it while
  * the program is running
  */
-@Target(ElementType.TYPE) // used on class
+@Target({ ElementType.TYPE, ElementType.METHOD }) // used on class
 @Retention(RetentionPolicy.RUNTIME)
 @interface VeryImportant {
 
