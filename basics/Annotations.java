@@ -40,7 +40,7 @@ public class Annotations {
 
 class RunCodes {
     // annotation
-    @SuppressWarnings("unused")
+    @SuppressWarnings("unused") // this annotation takes the 'unused' parameter
     private String name;
     private int age;
 
