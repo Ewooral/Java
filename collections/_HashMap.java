@@ -1,4 +1,3 @@
-package collections;
 
 import java.io.*;
 import java.util.HashMap;
