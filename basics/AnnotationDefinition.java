@@ -1,3 +1,7 @@
+/*
+ * @
+ */
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -6,10 +10,11 @@ import java.lang.annotation.Target;
 // annotation
 @VeryImportant
 public class AnnotationDefinition {
-    // annotation
+    @ImportantString
     @SuppressWarnings("unused") // this annotation takes the 'unused' parameter
-    private String firstname;
+    public String maidenName;
 
+    private String firstname;
     private String lastname;
     private int age;
     private String address;
@@ -17,16 +22,17 @@ public class AnnotationDefinition {
 
     // constructor
     public AnnotationDefinition(String FIRSTNAME, String LASTNAME, int AGE,
-            String ADDRESS, String SCHOOLSTATUS) {
+            String ADDRESS, String SCHOOLSTATUS, String MAIDENNAME) {
         this.firstname = FIRSTNAME;
         this.age = AGE;
         this.lastname = LASTNAME;
         this.address = ADDRESS;
         this.schoolStatus = SCHOOLSTATUS;
+        this.maidenName = MAIDENNAME;
     }
 
     // annotation
-    @RunImmediately(times = 1)
+    @RunImmediately
     public void getLastName() {
         System.out.println("Lastname: " + this.lastname);
     }
@@ -36,9 +42,9 @@ public class AnnotationDefinition {
     }
 
     // annotation
-    @VeryImportant
-    public int getAge() {
-        return this.age;
+    @RunImmediately(times = 3)
+    public void getAge() {
+        System.out.println(this.age);
     }
 
     // annotation
@@ -48,7 +54,7 @@ public class AnnotationDefinition {
     }
 
     // annotation
-    @RunImmediately(times = 1)
+    @RunImmediately
     public void getAddress() {
         System.out.println("Address: " + this.address);
     }
@@ -74,6 +80,14 @@ public class AnnotationDefinition {
 @Target(ElementType.METHOD)
 @interface RunImmediately {
     // add parameter to annotation
-    int times();
+    // they can only be a primitive type, class type, array type, String type
+    // default value can be passed as parameters
+    int times() default 1;
+
+}
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+@interface ImportantString {
 
 }
