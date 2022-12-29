@@ -7,13 +7,16 @@ public class AnnotationDefinition {
     // annotation
     @SuppressWarnings("unused") // this annotation takes the 'unused' parameter
     private String name;
+
     private int age;
 
+    // constructor
     public AnnotationDefinition(String NAME, int AGE) {
         this.name = NAME;
         this.age = AGE;
     }
 
+    // annotation
     @VeryImportant
     public void setAge(int age) {
         this.age = age;
@@ -25,9 +28,10 @@ public class AnnotationDefinition {
         return this.age;
     }
 
+    // annotation
     @RunImmediately
     public void name() {
-        System.out.println("My name is Elijah ");
+        System.out.println("My name is " + this.name);
     }
 }
 

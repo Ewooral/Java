@@ -29,12 +29,6 @@ public class AnnotationsTesting {
             }
         }
 
-        // Instance of the AArrays class
-        AArrays aa = new AArrays();
-        System.out.println(aa.foodNum);
-        System.out.println(aa.FamilySize);
-        aa.getNumLength();
-        aa.dontKnow();
     }
 
 }
