@@ -3,23 +3,36 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+// annotation
+@VeryImportant
 public class AnnotationDefinition {
     // annotation
     @SuppressWarnings("unused") // this annotation takes the 'unused' parameter
-    private String name;
+    private String firstname;
 
+    private String lastname;
     private int age;
+    private String address;
+    private String schoolStatus;
 
     // constructor
-    public AnnotationDefinition(String NAME, int AGE) {
-        this.name = NAME;
+    public AnnotationDefinition(String FIRSTNAME, String LASTNAME, int AGE,
+            String ADDRESS, String SCHOOLSTATUS) {
+        this.firstname = FIRSTNAME;
         this.age = AGE;
+        this.lastname = LASTNAME;
+        this.address = ADDRESS;
+        this.schoolStatus = SCHOOLSTATUS;
     }
 
     // annotation
-    @VeryImportant
-    public void setAge(int age) {
-        this.age = age;
+    @RunImmediately
+    public void getLastName() {
+        System.out.println("Lastname: " + this.lastname);
+    }
+
+    public void getFirstName() {
+        System.out.println("Firstname: " + this.firstname);
     }
 
     // annotation
@@ -30,8 +43,14 @@ public class AnnotationDefinition {
 
     // annotation
     @RunImmediately
-    public void name() {
-        System.out.println("My name is " + this.name);
+    public void getSchoolStatus() {
+        System.out.println("school status: " + this.schoolStatus);
+    }
+
+    // annotation
+    @RunImmediately
+    public void getAddress() {
+        System.out.println("Address: " + this.address);
     }
 }
 
