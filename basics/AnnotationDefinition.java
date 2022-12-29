@@ -1,5 +1,5 @@
-/*
- * @
+/*  ANNOTATION TUTORIALS ON YOUTUBE  
+ * @ https://youtu.be/DkZr7_c9ry8
  */
 
 import java.lang.annotation.ElementType;
