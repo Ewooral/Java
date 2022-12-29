@@ -11,6 +11,7 @@ import java.util.HashMap;
 public class _HashMap {
     private int n;
     private int m;
+    private HashMap<Integer, String> eli = new HashMap<>();
 
     public static void main(String[] args) {
         testCode();
@@ -19,6 +20,7 @@ public class _HashMap {
     public _HashMap(int n, int m) {
         this.n = n;
         this.m = m;
+
     }
 
     public int addNum() {
@@ -31,7 +33,8 @@ public class _HashMap {
             // write to file
             BufferedWriter wf = new BufferedWriter(new FileWriter("collections/hashMap.txt"));
             wf.write("who has the final say? \nI bet you that it is Jesus \nwho has the final say\n" +
-                    "has the blokes whom we \nspared been able to init the \nvalues in their final sayings?");
+                    "has the blokes whom we \nspared been able to init the \nvalues in their final sayings?" +
+                    "whom, whom am i to whom");
             wf.close();
 
         } catch (IOException e) {
@@ -70,6 +73,14 @@ public class _HashMap {
             e.printStackTrace();
         }
 
+    }
+
+    public void hashMapMethods() {
+        this.eli.put(23, "Eli");
+        this.eli.put(34, "Kwame");
+        this.eli.put(-9, "Saddick");
+        System.out.println("Eli: " + this.eli);
+        System.out.println();
     }
 
     public static void testCode() {
