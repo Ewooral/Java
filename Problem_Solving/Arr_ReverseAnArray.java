@@ -33,7 +33,7 @@ public class Arr_ReverseAnArray {
 
 }
 
-class Test {
+class TestMe {
     public static void main(String[] args) {
         Arr_ReverseAnArray ar = new Arr_ReverseAnArray();
         Integer[] input = { 1, 2, 3, 4, 5 };
