@@ -7,6 +7,8 @@ public class OOP {
     // member variables or fields or instance variables
     private int dollar;
     private int cedi;
+
+    public static int gas;
     ArrayList<String> food = new ArrayList<String>();
 
     Logger l = Logger.getLogger("newlogger");
@@ -17,6 +19,7 @@ public class OOP {
     public OOP(int d, int c) {
         this.cedi = c;
         this.dollar = d;
+
     }
 
     // constructor with no parameters
@@ -65,7 +68,6 @@ class Tester {
 
         // instance of the class
         OOP oop = new OOP(100, 800);
-
         System.out.println(oop.cediToDollar(23));
         System.out.println("Dollar is: " + oop.getDollar());
         oop.setDollar(250);
