@@ -278,7 +278,7 @@ Using access levels allows you to control the `visibility` and `accessibility` o
 ## what are stacks, lists and queues in java
 # ......................................................................
 
-In Java, a stack is a data structure that allows you to store and access elements in a Last In First Out (LIFO) manner. A stack is implemented using the java.util.Stack class, which extends the Vector class and provides additional methods for stack operations.
+In Java, `a stack` is a data structure that allows you to `store` and `access` elements in a `Last In First Out (LIFO) manner`. A stack is `implemented` using the `java.util.Stack` class, which extends the Vector class and provides additional methods for stack operations.
 
 Here's an example of how to use the Stack class in Java:
 
