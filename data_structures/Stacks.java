@@ -1,10 +1,14 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.ArrayDeque;
+import java.util.Queue;
 
 public class Stacks {
     public static ArrayList<Integer> arr = new ArrayList<>();
     public static ArrayDeque<Integer> queue = new ArrayDeque<>();
+    public static Queue<Integer> QUEUE = new LinkedList<>();
 
     // public void reverse(ArrayList<Integer> arr) {
     // for (int i = arr.size() - 1; i != -1; i--) {
@@ -22,8 +26,12 @@ public class Stacks {
         push(1);
         push(203);
 
+        // TRAVERSE
+        System.out.println("........TRAVERSE........");
+        traverse();
+
         // STACK
-        System.out.println("........STACK........");
+        System.out.println("\n........STACK........");
         buildStack(new ArrayList<>(Arrays.asList(1, 2, 3, 4)));
         buildStack(arr);
         System.out.println(peek());
@@ -40,6 +48,7 @@ public class Stacks {
         System.out.println(queue);
     }
 
+    // build stack
     public static void buildStack(ArrayList<Integer> arr) {
         int i = 0;
         int j = arr.size() - 1;
@@ -54,16 +63,27 @@ public class Stacks {
         System.out.println(arr);
     }
 
+    // push
     public static void push(int item) {
         arr.add(item);
     }
 
+    // peek
     public static int peek() {
         return arr.get(0);
     }
 
+    // pop
     public static int pop() {
         return arr.remove(0);
+    }
+
+    // Traverse arr
+    public static void traverse() {
+        Iterator<Integer> I = arr.iterator();
+        while (I.hasNext()) {
+            System.out.print(I.next() + ", ");
+        }
     }
 
 }
