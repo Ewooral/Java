@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ArrayDeque;
 
 public class Stacks {
     public static ArrayList<Integer> arr = new ArrayList<>();
+    public static ArrayDeque<Integer> queue = new ArrayDeque<>();
 
     // public void reverse(ArrayList<Integer> arr) {
     // for (int i = arr.size() - 1; i != -1; i--) {
@@ -18,19 +20,32 @@ public class Stacks {
         push(0);
         push(4);
         push(1);
+        push(203);
+
+        // STACK
+        System.out.println("........STACK........");
         buildStack(new ArrayList<>(Arrays.asList(1, 2, 3, 4)));
         buildStack(arr);
+        System.out.println(peek());
+        System.out.println(pop());
+        buildStack(arr);
 
+        // QUEUE
+        System.out.println("........QUEUE........");
+        queue.add(12);
+        queue.add(2);
+        queue.add(-9);
+        queue.add(0);
+        queue.add(4);
+        System.out.println(queue);
     }
 
     public static void buildStack(ArrayList<Integer> arr) {
         int i = 0;
         int j = arr.size() - 1;
-        int end = arr.get(i);
-        int begin = arr.get(j);
         while (i < j) {
-            end = arr.get(j);
-            begin = arr.get(i);
+            int begin = arr.get(i);
+            int end = arr.get(j);
             arr.set(i, end);
             arr.set(j, begin);
             i++;
@@ -43,17 +58,12 @@ public class Stacks {
         arr.add(item);
     }
 
-    // public void printStack() {
-    // reverse(customStack);
-    // System.out.println(cStack);
-    // }
+    public static int peek() {
+        return arr.get(0);
+    }
 
-    // public int peek() {
-    // return cStack.get(0);
-    // }
-
-    // public int pop() {
-    // return cStack.remove(0);
-    // }
+    public static int pop() {
+        return arr.remove(0);
+    }
 
 }
