@@ -270,6 +270,74 @@ class BankAccount {
   }
 }
 ```
-In this example, the accountNumber and balance variables are marked as private, which means they can only be accessed and modified within the BankAccount class. The owner variable is marked as protected, which means it can be accessed within the BankAccount class and any subclasses. The getAccountNumber(), getBalance(), and setBalance() methods are marked as public, which means they can be accessed from any code that has a reference to a BankAccount object. The transfer() method is marked as protected, which means it can be accessed within the BankAccount class and any subclasses.
+In this example, the `accountNumber` and `balance` variables are marked as `private`, which means they can only be accessed and modified within the `BankAccount` class. The `owner` variable is marked as `protected`, which means it can be accessed within the `BankAccount` class and any `subclasses`. The `getAccountNumber()`, `getBalance()`, and `setBalance()` methods are marked as `public`, which means they can be `accessed` from `any` code that has a reference to a `BankAccount` object. The `transfer()` method is marked as `protected`, which means it can be accessed within the `BankAccount` class and any `subclasses`.
 
-Using access levels allows you to control the visibility and accessibility of class methods and properties, and helps to protect the data and behavior of your class from external modification. It is an important concept in Java and other object-oriented programming languages.
+Using access levels allows you to control the `visibility` and `accessibility` of class methods and properties, and helps to protect the data and behavior of your class from external modification. It is an important concept in Java and other object-oriented programming languages.
+
+
+## what are stacks, lists and queues in java
+# ......................................................................
+
+In Java, a stack is a data structure that allows you to store and access elements in a Last In First Out (LIFO) manner. A stack is implemented using the java.util.Stack class, which extends the Vector class and provides additional methods for stack operations.
+
+Here's an example of how to use the Stack class in Java:
+
+import java.util.Stack;
+
+Stack<String> stack = new Stack<>();
+
+// Push elements onto the stack
+stack.push("apple");
+stack.push("banana");
+stack.push("cherry");
+
+// Pop an element from the stack
+String top = stack.pop(); // Returns "cherry"
+
+// Peek at the top element of the stack
+top = stack.peek(); // Returns "banana"
+
+// Check if the stack is empty
+boolean isEmpty = stack.isEmpty(); // Returns false
+
+In this example, the stack object is an instance of the Stack class, which is used to store strings. The push() method is used to add elements to the stack, and the pop() method is used to remove and return the top element of the stack. The peek() method is used to view the top element of the stack without removing it. The isEmpty() method is used to check if the stack is empty.
+
+A list is an ordered collection of elements. In Java, there are several implementations of the List interface, including the ArrayList and LinkedList classes.
+
+Here's an example of how to use the ArrayList class in Java:
+
+import java.util.ArrayList;
+
+ArrayList<String> list = new ArrayList<>();
+
+// Add elements to the list
+list.add("apple");
+list.add("banana");
+list.add("cherry");
+
+// Get the element at a specific index
+String element = list.get(1); // Returns "banana"
+
+// Check if the list contains a specific element
+boolean contains = list.contains("apple"); // Returns true
+
+// Check the size of the list
+int size = list.size(); // Returns 3
+
+In this example, the list object is an instance of the ArrayList class, which is used to store strings. The add() method is used to add elements to the list, and the get() method is used to retrieve the element at a specific index. The contains() method is used to check if the list contains a specific element, and the size() method is used to get the number of elements in the list.
+
+A queue is a data structure that allows you to store and access elements in a First In First Out (FIFO) manner. In Java, a queue is implemented using the java.util.Queue interface, which has several implementations, including the LinkedList and PriorityQueue classes.
+
+Here's an example of how to use the LinkedList class as a queue in Java:
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+Queue<String> queue = new LinkedList<>();
+
+// Add elements to the queue
+queue.add("apple");
+queue.add("banana");
+queue.add("cherry");
+
+// Remove and return the
