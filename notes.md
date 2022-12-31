@@ -282,6 +282,7 @@ In Java, `a stack` is a data structure that allows you to `store` and `access` e
 
 Here's an example of how to use the Stack class in Java:
 
+```java
 import java.util.Stack;
 
 Stack<String> stack = new Stack<>();
@@ -299,13 +300,13 @@ top = stack.peek(); // Returns "banana"
 
 // Check if the stack is empty
 boolean isEmpty = stack.isEmpty(); // Returns false
-
-In this example, the stack object is an instance of the Stack class, which is used to store strings. The push() method is used to add elements to the stack, and the pop() method is used to remove and return the top element of the stack. The peek() method is used to view the top element of the stack without removing it. The isEmpty() method is used to check if the stack is empty.
+```
+In this example, the `stack` `object` is an instance of the `Stack` `class`, which is used to store strings. The push() method is used to add elements to the stack, and the pop() method is used to remove and return the top element of the stack. The peek() method is used to view the top element of the stack without removing it. The isEmpty() method is used to check if the stack is empty.
 
 A list is an ordered collection of elements. In Java, there are several implementations of the List interface, including the ArrayList and LinkedList classes.
 
-Here's an example of how to use the ArrayList class in Java:
-
+Here's an example of how to use the `ArrayList` class in Java:
+```java
 import java.util.ArrayList;
 
 ArrayList<String> list = new ArrayList<>();
@@ -323,13 +324,13 @@ boolean contains = list.contains("apple"); // Returns true
 
 // Check the size of the list
 int size = list.size(); // Returns 3
-
+```
 In this example, the list object is an instance of the ArrayList class, which is used to store strings. The add() method is used to add elements to the list, and the get() method is used to retrieve the element at a specific index. The contains() method is used to check if the list contains a specific element, and the size() method is used to get the number of elements in the list.
 
 A queue is a data structure that allows you to store and access elements in a First In First Out (FIFO) manner. In Java, a queue is implemented using the java.util.Queue interface, which has several implementations, including the LinkedList and PriorityQueue classes.
 
 Here's an example of how to use the LinkedList class as a queue in Java:
-
+```java
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -341,3 +342,4 @@ queue.add("banana");
 queue.add("cherry");
 
 // Remove and return the
+```
