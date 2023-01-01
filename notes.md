@@ -347,20 +347,3 @@ queue.add("cherry");
 
 
 ##................................................................................
-## To build a Django app called "Account Manager" that uses the Meta API to fetch details from the MetaTrader platform, I would follow these steps:
-
-    Install Django and create a new Django project. This will provide a foundation for our app and ensure that we have all of the necessary tools and libraries in place.
-
-    Create a new Django app within the project. This will allow us to separate our app's code and functionality from the rest of the Django project.
-
-    Install the Meta API Python library, which we can use to connect to the MetaTrader platform and fetch data. This library provides a set of functions and classes that we can use to interact with the MetaTrader platform and retrieve information about traders, trades, and other data.
-
-    Define models in our Django app to store the data that we will fetch from the MetaTrader platform. For example, we might create a Trader model to store information about individual traders, and a Trade model to store information about trades made by those traders. We can use Django's object-relational mapper (ORM) to define these models and interact with them in our code.
-
-    Create views and templates for our Django app to display the data that we have fetched from the MetaTrader platform. A view is a Python function that handles a web request and returns a response. A template is an HTML file that contains placeholders for dynamic data. We can use views to fetch data from the MetaTrader platform and pass it to templates, which will render the data for users to see.
-
-    Use the Meta API Python library to connect to the MetaTrader platform and fetch data. We can do this in our Django views, or we can create a separate script to fetch the data and store it in our Django models. The Meta API library provides a variety of functions that we can use to retrieve data from the MetaTrader platform, such as users_get to fetch a list of traders and trades_get to fetch a list of trades.
-
-    Test our app to ensure that it is correctly fetching data from the MetaTrader platform and displaying it to users. We can use Django's built-in testing tools to write test cases that verify that our app is working as expected.
-
-Overall, building a Django app that uses the Meta API to fetch data from the MetaTrader platform involves a combination of Django programming, Python programming, and use of the Meta API library. By following these steps and using the tools and technologies available to us, we can create a functional and user-friendly app that allows users to view and interact with data from the MetaTrader platform.
