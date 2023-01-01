@@ -27,5 +27,14 @@ def min_value(arr: list):
 min_value([2,-9, 4, 1, -4, 5, 0])
 
 
+# write a raise to the pow method
+def raise_to_the_pow(base, exponent):
+    # 2 ^ 3 = 2 * 2 * 2
+    res = 1;
+    for i in range(exponent):
+        res *= base;
+    return res;
+print(raise_to_the_pow(9, 3));
+
         
 
