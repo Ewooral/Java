@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class Stacks {
+public class Stacks_Queues {
     public static ArrayList<Integer> arr = new ArrayList<>();
     public static ArrayDeque<Integer> queue = new ArrayDeque<>();
     public static Queue<Integer> QUEUE = new LinkedList<>();
