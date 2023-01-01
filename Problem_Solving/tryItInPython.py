@@ -1,6 +1,6 @@
 from typing import List
 
-
+# reverse an array
 def swap(arr):
     i = 0;
     j = len(arr) - 1;
@@ -10,11 +10,10 @@ def swap(arr):
         j-=1;
     return arr;
 
-print(swap([2, 4, 1, 5, 0]));
-# 4, 2, 5, 1
-# 
+print(swap([2, -1, 4, 1, 5, 0]));
 
 
+# find minimum value in an array
 def min_value(arr: list):
         i, j = 0, 1 
         mini_value = arr[i]
@@ -23,13 +22,10 @@ def min_value(arr: list):
             if curV < mini_value:
                 mini_value = curV;
             j += 1;
-        return min_value;
+        print(mini_value)
 
-print(min_value([2, 4, 1, 5, 0]))
+min_value([2,-9, 4, 1, -4, 5, 0])
 
-b = [4, 2]
-d = b[0]
-print(d)
 
         
 
