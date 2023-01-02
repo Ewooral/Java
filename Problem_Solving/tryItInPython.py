@@ -36,5 +36,9 @@ def raise_to_the_pow(base, exponent):
     return res;
 print(raise_to_the_pow(9, 3));
 
+
+def raiise(base, power):
+    return base ** power 
+print(raiise(9, 3))
         
 
