@@ -135,7 +135,7 @@ class Tester {
             System.out.println(i.next());
         }
 
-        // testPerson();
+        testPerson();
 
     }
 
