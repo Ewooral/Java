@@ -1,112 +1,41 @@
-
-import java.io.*;
 import java.util.HashMap;
-
-/**
- * @param {string} str
- * @return {boolean}
- * 
- */
+import java.util.Map;
+import static java.util.Map.entry;
+import java.util.Map.Entry;
 
 public class _HashMap {
-    private int n;
-    private int m;
-    private HashMap<Integer, String> eli = new HashMap<>();
 
     public static void main(String[] args) {
-        testCode();
-    }
+        HashMap<Integer, String> map = new HashMap<Integer, String>();
 
-    public _HashMap(int n, int m) {
-        this.n = n;
-        this.m = m;
+        // Create a hashmap
+        System.out.println("....CREATE...");
+        map.put(0, "Linear");
+        map.putAll(Map.of(1, "Arrays", 2, "Queues", 3, "Stacks"));
 
-    }
+        Map<Integer, String> mapp = Map.ofEntries(
+                entry(1, "a"),
+                entry(2, "b"),
+                entry(3, "c"),
+                entry(26, "z"));
 
-    public int addNum() {
-        return this.n + this.m;
-    }
+        System.out.println(map);
+        System.out.println(mapp);
 
-    public void countWords() {
+        // get keys and values
+        System.out.println("...GET KEYS AND VALUES...");
+        System.out.println(map.keySet());
+        System.out.println(map.entrySet());
 
-        try {
-            // write to file
-            BufferedWriter wf = new BufferedWriter(new FileWriter("collections/hashMap.txt"));
-            wf.write("who has the final say? \nI bet you that it is Jesus \nwho has the final say\n" +
-                    "has the blokes whom we \nspared been able to init the \nvalues in their final sayings?" +
-                    "whom, whom am i to whom");
-            wf.close();
+        System.out.println(mapp.keySet());
 
-        } catch (IOException e) {
-
-            e.printStackTrace();
+        for (Entry<Integer, String> k : map.entrySet()) {
+            System.out.println(k.getKey() + ": " + k.getValue());
         }
-
-        try {
-            HashMap<String, Integer> map = new HashMap<String, Integer>();
-            // read from file and convert it to an array of strings
-            BufferedReader rf = new BufferedReader(new FileReader("collections/hashMap.txt"));
-            String line;
-            while ((line = rf.readLine()) != null) {
-                String[] eachLine = line.split(" ");
-
-                for (String w : eachLine) {
-                    w = w.toLowerCase();
-                    if (map.keySet().contains(w)) {
-                        map.put(w, map.get(w) + 1);
-                    } else {
-                        map.put(w, 1);
-                    }
-
-                }
-            }
-
-            for (String w : map.keySet()) {
-                int occurences = map.get(w);
-
-                // System.out.println(occurences + "\t" + w);
-                System.out.println(w + " : " + occurences);
-
-            }
-            rf.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        System.out.println("............................");
+        for (Entry<Integer, String> k : mapp.entrySet()) {
+            System.out.println(k.getKey() + ": " + k.getValue());
         }
-
-    }
-
-    public void hashMapMethods() {
-        this.eli.put(23, "Eli");
-        this.eli.put(34, "Kwame");
-        this.eli.put(-9, "Saddick");
-        System.out.println(this.eli);
-        System.out.println(eli.containsKey(23));
-        System.out.println(eli.containsValue("Kwame"));
-        System.out.println(eli.containsValue("George"));
-        eli.replace(23, "Eli", "Elijah");
-        eli.putIfAbsent(1, "Kai Havertz");
-        eli.putIfAbsent(1, "CR7");
-        System.out.println(eli);
-        eli.remove(-9);
-        System.out.println(eli);
-
-    }
-
-    public static void testCode() {
-        _HashMap hm = new _HashMap(10, 10);
-
-        System.out.println(hm.m);
-        System.out.println("...............");
-
-        System.out.println(hm.addNum());
-        System.out.println("...............");
-
-        hm.countWords();
-        System.out.println("...............");
-
-        hm.hashMapMethods();
-        System.out.println("...............");
-
     }
 
 }
