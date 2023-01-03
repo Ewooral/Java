@@ -5,12 +5,13 @@ interface Food {
 public class Interface_Implementation implements Food {
     public static void main(String[] args) {
         UseMe useme = new UseMe();
+        Interface_Implementation ii = new Interface_Implementation();
+        ii.sing();
         System.out.println(useme.age());
         System.out.println(useme.isTall());
         System.out.println(useme.walk());
         System.out.println(Interface.studentID);
-        Interface_Implementation ii = new Interface_Implementation();
-        ii.sing();
+
     }
 
     @Override

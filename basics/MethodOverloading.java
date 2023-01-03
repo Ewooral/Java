@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class FunctionOverload {
+public class MethodOverloading {
 
     // this is the main method in which other methods are called
     public static void main(String[] args) {

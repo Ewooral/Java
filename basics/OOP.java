@@ -5,13 +5,11 @@ import java.lang.Object;
 public class OOP {
 
     // member variables or fields or instance variables
-    private int dollar;
-    private int cedi;
+    private int dollar = 11;
+    private int cedi = 1;
 
-    public static int gas;
+    public static int gas = 20;
     ArrayList<String> food = new ArrayList<String>();
-
-    Logger l = Logger.getLogger("newlogger");
 
     // constructor with parameters
     // method overloading
@@ -63,6 +61,52 @@ public class OOP {
 
 }
 
+class Person extends OOP {
+    private String name, gender, eyeColor;
+    private int age, weight, height;
+
+    public Person(int d, int c, String name, int age, int height,
+            int weight, String eyeColor, String gender) {
+        super(d, c);
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.eyeColor = eyeColor;
+        this.gender = gender;
+    }
+
+    // method overloading
+    public String getName() {
+        return this.name;
+    }
+
+    public String getName(String lname) {
+        return this.name + " " + lname;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public String getEyeColor() {
+        return this.eyeColor;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public String getGender() {
+        return this.gender;
+    }
+
+}
+
 class Tester {
     public static void main(String[] args) {
 
@@ -88,9 +132,7 @@ class Tester {
         Iterator<String> i = newFood.iterator();
 
         while (i.hasNext()) {
-
             System.out.println(i.next());
-
         }
 
         testPerson();
@@ -100,9 +142,16 @@ class Tester {
     @Test
     public static void testPerson() {
 
-        Person p = new Person("Joe Q Author", 42, 173, 82, "Brown", "MALE");
+        Person p = new Person(25, 50, "Joe Q Author", 42, 173, 82, "Brown", "MALE");
+        System.out.println("gas: " + OOP.gas);
+        p.setFood("Peperoni");
+        p.setFood("Mushroom");
+        p.setFood("Agushie and Pepper soup");
+        System.out.println("Food: " + p.food);
+        System.out.println(p.getFood());
 
-        Logger l = Logger.getLogger(Person.class.getName());
+        // LOGGER CLASS
+        Logger l = Logger.getLogger("TESTING...");
         l.info("Created Person object named: " + p.getName());
 
         assertEquals("Joe Q Author", p.getName());
@@ -111,6 +160,9 @@ class Tester {
         assertEquals(80, p.getWeight());
         assertEquals("Brown", p.getEyeColor());
         assertEquals("MALE", p.getGender());
+
+        System.out.println(p.getName());
+        System.out.println(p.getName("Boahen"));
     }
 
     private static void assertEquals(Object message, Object message2) {
@@ -120,43 +172,4 @@ class Tester {
             System.out.println(false);
         }
     }
-}
-
-class Person {
-    private String name, gender, eyeColor;
-    private int age, weight, height;
-
-    public Person(String name, int age, int height, int weight, String eyeColor, String gender) {
-        this.name = name;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-        this.eyeColor = eyeColor;
-        this.gender = gender;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public int getAge() {
-        return this.age;
-    }
-
-    public int getHeight() {
-        return this.height;
-    }
-
-    public String getEyeColor() {
-        return this.eyeColor;
-    }
-
-    public int getWeight() {
-        return this.weight;
-    }
-
-    public String getGender() {
-        return this.gender;
-    }
-
 }
