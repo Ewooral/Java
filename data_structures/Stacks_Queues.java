@@ -51,14 +51,13 @@ public class Stacks_Queues {
         int i = 0;
         arr.add(num);
         int j = arr.size() - 1;
-
         while (i < j) {
             int begin = arr.get(i);
             int end = arr.get(j);
             arr.set(i, end);
             arr.set(j, begin);
             i++;
-            j--;
+            // j--;
         }
 
     }
