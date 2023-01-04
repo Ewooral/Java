@@ -57,7 +57,7 @@ public class Stacks_Queues {
             arr.set(i, end);
             arr.set(j, begin);
             i++;
-            // j--;
+            j--;
         }
 
     }
