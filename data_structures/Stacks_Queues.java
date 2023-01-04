@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class Stacks_Queues {
-    public static ArrayList<Integer> arr = new ArrayList<>();
+    public ArrayList<Integer> arr = new ArrayList<>();
     public static ArrayDeque<Integer> queue = new ArrayDeque<>();
     public static Queue<Integer> QUEUE = new LinkedList<>();
 
@@ -18,25 +17,21 @@ public class Stacks_Queues {
     // }
     // [12, 2, -9, 0, 4, 1]
     public static void main(String[] args) {
-        push(12);
-        push(2);
-        push(-9);
-        push(0);
-        push(4);
-        push(1);
-        push(203);
+        Stacks_Queues stacks = new Stacks_Queues();
 
         // TRAVERSE
         System.out.println("........TRAVERSE........");
-        traverse();
+        stacks.traverse();
 
         // STACK
         System.out.println("\n........STACK........");
-        buildStack(new ArrayList<>(Arrays.asList(1, 2, 3, 4)));
-        buildStack(arr);
-        System.out.println(peek());
-        System.out.println(pop());
-        buildStack(arr);
+
+        stacks.addFirst(12);
+        stacks.addFirst(2);
+        stacks.addFirst(-9);
+        stacks.addFirst(0);
+        stacks.addFirst(4);
+        System.out.println(stacks.arr);
 
         // QUEUE
         System.out.println("........QUEUE........");
@@ -46,13 +41,17 @@ public class Stacks_Queues {
         queue.add(0);
         queue.add(4);
         System.out.println(queue);
+
+        ;
+        // System.out.println(queue);/
     }
 
-    // build stack
-    public static void buildStack(ArrayList<Integer> arr) {
+    // push or add
+    public void addFirst(int num) {
+        arr.add(num);
         int i = 0;
         int j = arr.size() - 1;
-        while (i < j) {
+        while (i < j && arr.size() > 1) {
             int begin = arr.get(i);
             int end = arr.get(j);
             arr.set(i, end);
@@ -60,30 +59,30 @@ public class Stacks_Queues {
             i++;
             j--;
         }
-        System.out.println(arr);
-    }
 
-    // push
-    public static void push(int item) {
-        arr.add(item);
     }
 
     // peek
-    public static int peek() {
+    public int peek() {
         return arr.get(0);
     }
 
     // pop
-    public static int pop() {
+    public int pop() {
         return arr.remove(0);
     }
 
     // Traverse arr
-    public static void traverse() {
+    public void traverse() {
         Iterator<Integer> I = arr.iterator();
         while (I.hasNext()) {
             System.out.print(I.next() + ", ");
         }
+    }
+
+    public int countStr() {
+
+        return 0;
     }
 
 }
