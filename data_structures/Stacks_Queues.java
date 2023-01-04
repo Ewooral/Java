@@ -48,10 +48,9 @@ public class Stacks_Queues {
 
     // push or add
     public void addFirst(int num) {
-        arr.add(num);
         int i = 0;
         int j = arr.size() - 1;
-        while (i < j && arr.size() > 1) {
+        while (i < j) {
             int begin = arr.get(i);
             int end = arr.get(j);
             arr.set(i, end);
