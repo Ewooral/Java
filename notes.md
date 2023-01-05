@@ -8,15 +8,21 @@
 
 In Java, an `interface` is a `blueprint` for a class. 
 
-    It defines a set of methods that a class must implement, but does not provide any implementation for these methods. An interface is defined using the interface keyword, and it can contain only method declarations and constant variables.
+    It defines a set of methods that a class must implement, but does not provide any implementation
+    for these methods. An interface is defined using the interface keyword, and it can contain only
+    method declarations and constant variables.
 
 ## Class
 
 A class is a `template` for creating `objects`. 
 
-    It defines the properties and behaviors of an object. A class is defined using the class keyword, and it can contain method definitions, variables, and constructors.
+    It defines the properties and behaviors of an object. A class is defined using the class 
+    keyword, and it can contain method definitions, variables, and constructors.
 
-An `object` is an instance of a class. It represents a specific `entity` in the real world, and it has its own `state` and `behavior`. Objects are created using the `new` operator, and they can `access` and `modify` the `properties` and `behaviors` defined in their class.
+An `object` is an instance of a class. It represents a specific `entity` in the 
+real world, and it has its own `state` and `behavior`. Objects are created using 
+the `new` operator, and they can `access` and `modify` the `properties` and 
+`behaviors` defined in their class.
 
 Here's an example of how these concepts might be used in Java:
 
@@ -55,20 +61,26 @@ Dog myDog = new Dog("Fido", 3);
 // Use the object to call the makeSound() method
 myDog.makeSound();
 ```
-In this example, the Animal interface defines the makeSound() method, which must be implemented by any class that implements the interface. The Dog class implements the Animal interface and provides an implementation for the makeSound() method. The Dog class also has its own properties (name and age) and behaviors (the getName() and getAge() methods). The myDog object is an instance of the Dog class, and it can access and modify the properties and behaviors defined in the Dog class.
+In this example, the Animal interface defines the makeSound() method, which must be implemented by 
+any class that implements the interface. The Dog class implements the Animal interface and provides
+an implementation for the makeSound() method. The Dog class also has its own properties (name and age)
+and behaviors (the getName() and getAge() methods). The myDog object is an instance of the Dog
+class, and it can access and modify the properties and behaviors defined in the Dog class.
 
 
 
-#### ..................................................................................................
+#### ........................................................................................
 
 ## what are Polymorphism, encapsulation and inheritance and give code examples in java
 
     Polymorphism, encapsulation, and inheritance are important concepts 
     in object-oriented programming (OOP).
 
-`Polymorphism` is the ability of an object to take on multiple forms. In Java, polymorphism can be achieved through method overloading and method overriding.
+`Polymorphism` is the ability of an object to take on multiple forms. In Java, polymorphism
+ can be achieved through method overloading and method overriding.
 
-`Method overloading` is the ability of a class to have multiple methods with the same name, but with different signatures. For example:
+`Method overloading` is the ability of a class to have multiple methods with the same name, 
+but with different signatures. For example:
 ```java
 class Calculator {
   public int add(int a, int b) {

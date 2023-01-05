@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ArrayDeque;
@@ -18,6 +19,13 @@ public class Stacks_Queues {
     // [12, 2, -9, 0, 4, 1]
     public static void main(String[] args) {
         Stacks_Queues stacks = new Stacks_Queues();
+        // stacks.push(12);
+        // stacks.push(2);
+        // stacks.push(-9);
+        // stacks.push(0);
+        // stacks.push(4);
+        // stacks.push(1);
+        // stacks.push(203);
 
         // TRAVERSE
         System.out.println("........TRAVERSE........");
@@ -26,11 +34,9 @@ public class Stacks_Queues {
         // STACK
         System.out.println("\n........STACK........");
 
-        stacks.addFirst(12);
+        stacks.addFirst(9);
+        stacks.addFirst(23);
         stacks.addFirst(2);
-        stacks.addFirst(-9);
-        stacks.addFirst(0);
-        stacks.addFirst(4);
         System.out.println(stacks.arr);
 
         // QUEUE
@@ -46,12 +52,12 @@ public class Stacks_Queues {
         // System.out.println(queue);/
     }
 
-    // push or add
+    // build stack
     public void addFirst(int num) {
-        int i = 0;
         arr.add(num);
+        int i = 0;
         int j = arr.size() - 1;
-        while (i < j) {
+        while (i < j && arr.size() > 1) {
             int begin = arr.get(i);
             int end = arr.get(j);
             arr.set(i, end);
@@ -60,6 +66,11 @@ public class Stacks_Queues {
             j--;
         }
 
+    }
+
+    // push
+    public void push(int item) {
+        arr.add(item);
     }
 
     // peek
