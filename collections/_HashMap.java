@@ -36,6 +36,33 @@ public class _HashMap {
         for (Entry<Integer, String> k : mapp.entrySet()) {
             System.out.println(k.getKey() + ": " + k.getValue());
         }
+        System.out.println("............................");
+        _HashMap m = new _HashMap();
+        m.countChars("souo");
+    }
+
+    HashMap<Character, Integer> hMap = new HashMap<>();
+
+    public void countChars(String ch) {
+        for (int i = 0; i < ch.length(); i++) {
+            char c1 = ch.charAt(i);
+            if (hMap.containsKey(c1)) {
+                continue;
+            }
+            int count = 1;
+            hMap.put(c1, count);
+            for (int j = i + 1; j < ch.length(); j++) {
+                char c2 = ch.charAt(j);
+                if (c1 == c2) {
+                    hMap.put(c1, count + 1);
+                    count = hMap.get(c1);
+                }
+
+            }
+
+            System.out.println(c1 + ":" + hMap.get(c1));
+
+        }
     }
 
 }
