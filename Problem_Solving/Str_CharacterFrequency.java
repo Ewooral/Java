@@ -47,11 +47,8 @@ public class Str_CharacterFrequency {
                     hMap.put(c1, count + 1);
                     count = hMap.get(c1);
                 }
-
             }
-
             System.out.println(c1 + ":" + hMap.get(c1));
-
         }
     }
 
