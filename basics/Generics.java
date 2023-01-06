@@ -36,7 +36,7 @@ class Printer<T> {
     }
 
     public void print() {
-        System.out.println(thingToPrint);
+        // System.out.println(thingToPrint);
     }
 
 }
