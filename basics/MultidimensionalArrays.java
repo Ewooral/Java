@@ -16,7 +16,7 @@ public class MultidimensionalArrays {
         multiD[0][2] = 9;
 
         for (int i = 0; i < multiD.length; i++) {
-            // System.out.println(Arrays.toString(multiD[i]));
+            System.out.println(Arrays.toString(multiD[i]));
         }
         System.out.println(multiD.getClass().getSimpleName());
 
