@@ -66,3 +66,24 @@ def move_to_left(arr, k):
     return arr
 
 print(move_to_left([2, 1, 2, 2, 2, 3, 4, 2], 2))
+
+
+
+# is palindrome
+def isPalindrome(I: int):
+     S: str = str(I);
+     i: int = 0;
+     j: int = len(S) - 1;
+     while(i < j):
+        if S[i] == S[j]:
+            i+= 1;
+            j-= 1;
+        else:
+            return False;
+     return True;
+
+print(isPalindrome(121));
+print(isPalindrome(2312132));
+print(isPalindrome(-121));
+print(isPalindrome(10));
+
