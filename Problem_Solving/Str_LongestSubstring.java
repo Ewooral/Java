@@ -12,8 +12,8 @@ public class Str_LongestSubstring {
             char cur = curStr.charAt(i);
             char nex = nextStr.charAt(i);
             while (j < aa.length) {
-                if (aa[i] == aa[j]) {
-                    j++;
+                if (cur == nex) {
+                    // j++;
                 } else {
                     i++;
                 }
