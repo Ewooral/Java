@@ -13,7 +13,7 @@ public class Str_LongestSubstring {
             char nex = nextStr.charAt(i);
             while (j < aa.length) {
                 if (cur == nex) {
-                    // j++;
+                    j++;
                 } else {
                     i++;
                 }
