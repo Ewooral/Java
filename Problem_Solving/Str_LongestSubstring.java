@@ -7,20 +7,28 @@ public class Str_LongestSubstring {
         String subString = "";
         int k = 0;
         String curStr = aa[i];
-        while (i < aa[i].length()) {
-        
-            while(j < arr)
-            // String nextStr = aa[j];
+        while (i < aa[k].length()) {
+            String nextStr = aa[j];
+            char cur = curStr.charAt(i);
+            char nex = nextStr.charAt(i);
+            while (j < aa.length) {
+                if (aa[i] == aa[j]) {
+                    j++;
+                } else {
+                    i++;
+                }
+            }
+            //
             // char cur = curStr.charAt(k);
             // char nex = nextStr.charAt(k);
             // if (cur == nex) {
-            //     j++;
+            // j++;
             // } else {
-            //     k++;
+            // k++;
             // }
 
             // while (k < curStr.length()) {
-            //     subString += cur;
+            subString += aa[i].charAt(i);
 
             // }
             // i++;
