@@ -7,7 +7,7 @@ public class Str_LongestSubstring {
         for (int i = 1; i < strs.length; i++) {
             int idx = strs[i].indexOf(prefix);
             while (idx != 0) {
-                // prefix = prefix.substring(0, prefix.length() - 1);
+                prefix = prefix.substring(0, prefix.length() - 1);
                 if (prefix.isEmpty())
                     return "";
             }
