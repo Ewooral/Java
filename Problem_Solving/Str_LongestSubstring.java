@@ -1,45 +1,43 @@
 public class Str_LongestSubstring {
 
-    public static void aab(String[] aa) {
-        // String[] aa = { "abc", "def" };
-        int i = 0;
-        int j = i + 1;
-        String subString = "";
-        int k = 0;
-        String curStr = aa[i];
-        while (i < aa[k].length()) {
-            String nextStr = aa[j];
-            char cur = curStr.charAt(i);
-            char nex = nextStr.charAt(i);
-            while (j < aa.length) {
-                if (cur == nex) {
-                    // j++;
-                } else {
-                    i++;
-                }
+    public static String longestCommonPrefix(String[] strs) {
+        if (strs.length == 0)
+            return "";
+        String prefix = strs[0];
+        for (int i = 1; i < strs.length; i++) {
+            int idx = strs[i].indexOf(prefix);
+            while (idx != 0) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.isEmpty())
+                    return "";
             }
-            //
-            // char cur = curStr.charAt(k);
-            // char nex = nextStr.charAt(k);
-            // if (cur == nex) {
-            // j++;
-            // } else {
-            // k++;
-            // }
-
-            // while (k < curStr.length()) {
-            subString += aa[i].charAt(i);
-
-            // }
-            // i++;
         }
 
+        return prefix;
+
+    }
+
+    public static String aab(String[] aa) {
+        // String[] aa = { "abc", "def" };
+        int i = 1;
+        String curStr = aa[0];
+        while (i < aa.length) {
+
+            while (aa[i].indexOf(curStr) != 0) {
+                curStr += curStr.substring(0, curStr.length() - 1);
+            }
+            if (curStr.isEmpty())
+                return "";
+        }
+        return curStr;
     }
 
     public static void main(String[] args) {
         String[] aa = { "abc", "def" };
         String[] ab = { "flower", "flow", "flight" };
-        aab(ab);
-        aab(aa);
+        // System.out.println(aab(aa));
+        // System.out.println(aab(ab));
+        // System.out.println(longestCommonPrefix(aa));
+        System.out.println(longestCommonPrefix(ab));
     }
 }
