@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class Str_SubstringOfAllConcatenation {
     /**
@@ -57,7 +56,8 @@ public class Str_SubstringOfAllConcatenation {
                 String subString = firstSubstr.substring(i, arrString.length());
 
                 if (arrString.equals(subString)) {
-                    firstSubstr = firstSubstr.replace(subString, "");
+                    // firstSubstr = firstSubstr.replace(subString, "");
+                    arrayStrings[i] = "";
                     System.out.println("Yes!");
                 }
             }
@@ -93,6 +93,5 @@ public class Str_SubstringOfAllConcatenation {
         System.out.println(substr.subOfAllConcat());
         System.out.println(substr1.subOfAllConcat());
 
-        IntStream.range(0, 5).forEach(System.out::println);
     }
 }
