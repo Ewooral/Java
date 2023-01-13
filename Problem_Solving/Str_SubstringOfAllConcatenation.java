@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Str_SubstringOfAllConcatenation {
     /**
@@ -91,5 +92,7 @@ public class Str_SubstringOfAllConcatenation {
         Str_SubstringOfAllConcatenation substr1 = new Str_SubstringOfAllConcatenation(ss, words);
         System.out.println(substr.subOfAllConcat());
         System.out.println(substr1.subOfAllConcat());
+
+        IntStream.range(0, 5).forEach(System.out::println);
     }
 }
