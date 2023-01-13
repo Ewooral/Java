@@ -4,7 +4,7 @@
 ## what are interfaces, classes and objects and how do they relate in java
 
 
-## Interface and te
+## Interface and tea
 
 In Java, an `interface` is a `blueprint` for a class. 
 
