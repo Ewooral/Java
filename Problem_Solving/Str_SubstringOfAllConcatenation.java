@@ -46,6 +46,21 @@ public class Str_SubstringOfAllConcatenation {
 
     public String subOfAllConcat() {
         String[] substr = getAllSubstringInArray();
+        String[] arrayStrings = this.arr;
+        String firstSubstr = "";
+        for (int i = 0; i < substr.length; i++) {
+            String arrString = arrayStrings[i];
+            firstSubstr += substr[i];
+            for (int j = 0; j < arrayStrings.length; j++) {
+
+                String subString = firstSubstr.substring(i, arrString.length());
+
+                if (arrString.equals(subString)) {
+                    firstSubstr = firstSubstr.replace(subString, "");
+                    System.out.println("Yes!");
+                }
+            }
+        }
         return Arrays.toString(substr);
     }
 
