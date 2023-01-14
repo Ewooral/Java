@@ -41,7 +41,7 @@ public class Str_SubstringOfAllConcatenation {
 
     private String s;
     private String[] arr;
-    private String[] resIdx;
+    // private String[] resIdx;
     // private int[] idx;
     // private int trackIdx = 0;
     private ArrayList<Integer> arrayList = new ArrayList<>();
