@@ -70,7 +70,7 @@ public class Str_SubstringOfAllConcatenation {
 
             String[] arrayStrings = this.arr.clone();
 
-            int count = 0;
+            // int count = 0;
 
             for (int i = 0; i < arrayStrings.length; i++) {
                 String arrString = arrayStrings[i];
