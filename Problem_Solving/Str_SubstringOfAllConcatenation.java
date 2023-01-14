@@ -87,10 +87,7 @@ public class Str_SubstringOfAllConcatenation {
                     String firstStr = subString.substring(a, b);
 
                     if (firstStr.equals(arrString)) {
-
-                        // firstSubstr = firstSubstr.replace(subString, "");
                         arrayStrings[i] = "";
-                        // System.out.println("Yes!");
                         break;
                     }
                     a += length;
@@ -106,10 +103,8 @@ public class Str_SubstringOfAllConcatenation {
                 } else {
                     isEmptyStrings = true;
                 }
-
             }
             if (!isEmptyStrings) {
-                // System.out.println("");
                 continue;
             } else {
                 // count++;
@@ -121,10 +116,7 @@ public class Str_SubstringOfAllConcatenation {
                 // trackIdx++;
                 System.out.println(ss.indexOf(subString, index));
                 arrayStrings = this.arr.clone();
-
-                // System.out.println(Arrays.toString(new int[] { this.s.indexOf(subString) }));
             }
-
         }
         return arrayList;
         // return Arrays.toString(resIdx);
