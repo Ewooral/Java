@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Str_SubstringOfAllConcatenation {
     /**
@@ -36,62 +38,123 @@ public class Str_SubstringOfAllConcatenation {
      * 1. GET THE "N" strings IN STRING "S" EQUAL TO "ARR" LENGTH
      * 
      */
+
     private String s;
     private String[] arr;
+    private String[] resIdx;
+    private int[] idx;
+    private int trackIdx = 0;
+    private ArrayList<Integer> arrayList = new ArrayList<>();
+    private HashMap<Integer, String> map = new HashMap<>();
 
     public Str_SubstringOfAllConcatenation(String S, String[] Arr) {
         this.s = S;
         this.arr = Arr;
     }
 
-    public String subOfAllConcat() {
-        String[] substr = getAllSubstringInArray();
-        String[] arrayStrings = this.arr;
-        String firstSubstr = "";
-        for (int i = 0; i < substr.length; i++) {
-            String arrString = arrayStrings[i];
-            firstSubstr += substr[i];
-            for (int j = 0; j < arrayStrings.length; j++) {
-
-                String subString = firstSubstr.substring(i, arrString.length());
-
-                if (arrString.equals(subString)) {
-                    // firstSubstr = firstSubstr.replace(subString, "");
-                    arrayStrings[i] = "";
-                    System.out.println("Yes!");
-                }
-            }
-        }
-        return Arrays.toString(substr);
-    }
-
-    public String[] getAllSubstringInArray() {
+    public ArrayList<Integer> subOfAllConcat() {
+        // public String subOfAllConcat() {
         String ss = this.s;
         int arrLength = String.join("", this.arr).length();
-        String[] array = new String[ss.length() / arrLength];
-        int i = 0;
-        int k = 0;
-        while (!ss.isEmpty() && ss.length() >= arrLength) {
-            String substr = ss.substring(i, arrLength);
-            array[k] = substr;
-            ss = ss.replace(substr, "");
-            k++;
-        }
+        int m = arrLength;
+        int alloSpace = ss.length() + 1 - m;
+        // resIdx = new String[alloSpace];
+        int q = 0;
+        int s = 0;
+        String subString = "";
 
-        return array;
+        while (q < alloSpace) {
+            subString = ss.substring(q, arrLength);
+            q++;
+            arrLength++;
+
+            String[] arrayStrings = this.arr.clone();
+
+            int count = 0;
+
+            for (int i = 0; i < arrayStrings.length; i++) {
+                String arrString = arrayStrings[i];
+
+                int length = arrString.length(), a = 0;
+                int b = length;
+
+                // if (map.containsValue(arrString)) {
+                // break;
+                // }
+                // map.put(i, arrString);
+
+                for (int j = 0; j < arrayStrings.length; j++) {
+                    String firstStr = subString.substring(a, b);
+
+                    if (firstStr.equals(arrString)) {
+
+                        // firstSubstr = firstSubstr.replace(subString, "");
+                        arrayStrings[i] = "";
+                        // System.out.println("Yes!");
+                        break;
+                    }
+                    a += length;
+                    b += length;
+                }
+
+            }
+            boolean isEmptyStrings = true;
+            for (int p = 0; p < arrayStrings.length; p++) {
+                if (arrayStrings[p] != "") {
+                    isEmptyStrings = false;
+                    break;
+                } else {
+                    isEmptyStrings = true;
+                }
+
+            }
+            if (!isEmptyStrings) {
+                // System.out.println("");
+                continue;
+            } else {
+                // count++;
+                // idx = new int[count];
+                int index = this.s.indexOf(subString, s);
+                s++;
+                arrayList.add(index);
+                // idx[trackIdx] = index;
+                // trackIdx++;
+                System.out.println(ss.indexOf(subString, index));
+                arrayStrings = this.arr.clone();
+
+                // System.out.println(Arrays.toString(new int[] { this.s.indexOf(subString) }));
+            }
+
+        }
+        return arrayList;
+        // return Arrays.toString(resIdx);
     }
 
     public static void main(String[] args) {
         String ss = "wordgoodgoodgoodbestword";
         String[] words = { "word", "good", "best", "word" };
-        String s = "barfoofoobarthefoobarman";
-        String[] sArr = { "bar", "foo", "the" };
-        // System.out.println(String.join("", sArr));
+        String s1 = "barfoofoobarthefoobarman";
+        String s = "bafobafoba";
+        String[] sArr = { "ba", "fo", };
+        String[] sArr1 = { "bar", "foo", "the" };
+        String s2 = "barfoothefoobarman";
+        String[] words2 = { "foo", "bar" };
 
         Str_SubstringOfAllConcatenation substr = new Str_SubstringOfAllConcatenation(s, sArr);
-        Str_SubstringOfAllConcatenation substr1 = new Str_SubstringOfAllConcatenation(ss, words);
-        System.out.println(substr.subOfAllConcat());
+        Str_SubstringOfAllConcatenation substr1 = new Str_SubstringOfAllConcatenation(s1, sArr1);
+        Str_SubstringOfAllConcatenation substr2 = new Str_SubstringOfAllConcatenation(ss, words);
+        Str_SubstringOfAllConcatenation substr3 = new Str_SubstringOfAllConcatenation(s2, words2);
+        // Str_SubstringOfAllConcatenation substr1 = new
+        // Str_SubstringOfAllConcatenation(ss, words);
+        // System.out.println(substr.subOfAllConcat());
+        System.out.println("..........................................");
         System.out.println(substr1.subOfAllConcat());
+
+        System.out.println("..........................................");
+        System.out.println(substr2.subOfAllConcat());
+
+        // System.out.println("..........................................");
+        // System.out.println(substr3.subOfAllConcat());
 
     }
 }
