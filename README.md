@@ -44,7 +44,7 @@ public class VariableTypes1 {
 
 ```
 
-
+I changed something.
 # There are two major classes of variables or data types in Java. Primitive type and Objects
   
   ## Primitive types ( Numbers, Characters, boolean values ) 
