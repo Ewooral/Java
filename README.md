@@ -1,7 +1,8 @@
 # Install multiple java jdks and switch between them in linux
     https://towardsdatascience.com/install-and-run-multiple-java-versions-on-linux-using-sdkman-858571bce6cf
 
-Delete me later for 
+Delete me later for own perusal 
+
 # There are three types of variables in Java:
 
     local variable
