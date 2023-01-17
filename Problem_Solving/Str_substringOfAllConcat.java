@@ -53,6 +53,7 @@ import java.util.Map;
  */
 
 public class Str_substringOfAllConcat {
+
     public static List<Integer> findSubstring(String s, String[] words) {
         List<Integer> result = new ArrayList<>();
         int n = words.length;
@@ -82,9 +83,64 @@ public class Str_substringOfAllConcat {
         return result;
     }
 
+    public static List<Integer> subOfAllConcat(String ss, String[] arr) {
+        List<Integer> arrayList = new ArrayList<>();
+        HashMap<Integer, String> map = new HashMap<>();
+        int arrLength = String.join("", arr).length();
+        int m = arrLength;
+        int allocatedSpace = ss.length() + 1 - m;
+        int q = 0;
+        int s = 0;
+        while (q < allocatedSpace) {
+            String subString = ss.substring(q, arrLength);
+            q++;
+            arrLength++;
+            String[] arrayStrings = arr.clone();
+            for (int i = 0; i < arrayStrings.length; i++) {
+                String arrString = arrayStrings[i];
+
+                int length = arrString.length(), a = 0;
+                int b = length;
+
+                // using hashmap to check for duplications
+                if (map.containsValue(arrString)) {
+                    continue;
+                }
+                for (int j = 0; j < arrayStrings.length; j++) {
+                    String firstStr = subString.substring(a, b);
+
+                    if (firstStr.equals(arrString)) {
+                        arrayStrings[i] = "";
+                        break;
+                    }
+                    a += length;
+                    b += length;
+                }
+                map.put(i, arrString);
+            }
+            boolean isEmptyStrings = true;
+            for (int p = 0; p < arrayStrings.length; p++) {
+                if (arrayStrings[p] != "") {
+                    isEmptyStrings = false;
+                    break;
+                } else {
+                    isEmptyStrings = true;
+                }
+            }
+            if (isEmptyStrings) {
+                int index = ss.indexOf(subString, s);
+                s++;
+                arrayList.add(index);
+                arrayStrings = arr.clone();
+            }
+            map.clear();
+        }
+        return arrayList;
+    }
+
     public static void main(String[] args) {
         String s = "barfoothefoobarman";
-        String[] words = { "foo", "bar" };
+        String[] words = { "foo", "bar", "foo", "foo" };
         String ss = "wordgoodgoodgoodbestword";
         String[] wordsS = { "word", "good", "best", "word" };
         String s1 = "barfoofoobarthefoobarman";
@@ -100,5 +156,10 @@ public class Str_substringOfAllConcat {
         System.out.println(result1);
         System.out.println(result2);
         System.out.println(result3);
+        System.out.println("......................");
+        System.out.println(subOfAllConcat(s, words));
+        System.out.println(subOfAllConcat(sS, sArr));
+        System.out.println(subOfAllConcat(s1, sArr1));
+        System.out.println(subOfAllConcat(ss, wordsS));
     }
 }

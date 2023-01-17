@@ -1,6 +1,6 @@
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Str_SubstringOfAllConcatenation {
     /**
@@ -41,85 +41,44 @@ public class Str_SubstringOfAllConcatenation {
 
     private String s;
     private String[] arr;
-    // private String[] resIdx;
-    // private int[] idx;
-    // private int trackIdx = 0;
-    private ArrayList<Integer> arrayList = new ArrayList<>();
+    private List<Integer> arrayList = new ArrayList<>();
     private HashMap<Integer, String> map = new HashMap<>();
+    private HashMap<String, Integer> map2 = new HashMap<>();
+    private HashMap<String, Integer> map3 = new HashMap<>();
+    private String[] strArr;
 
     public Str_SubstringOfAllConcatenation(String S, String[] Arr) {
         this.s = S;
         this.arr = Arr;
     }
 
-    public ArrayList<Integer> subOfAllConcat() {
-        // public String subOfAllConcat() {
+    public List<Integer> subOfAllConcat() {
         String ss = this.s;
         int arrLength = String.join("", this.arr).length();
         int m = arrLength;
-        int alloSpace = ss.length() + 1 - m;
-        // resIdx = new String[alloSpace];
-        int q = 0;
+        int pp = m;
+        int allocatedSpace = ss.length() + 1 - m;
+        int allo = allocatedSpace;
+        int q = 0, r = 0;
         int s = 0;
-        String subString = "";
-
-        while (q < alloSpace) {
-            subString = ss.substring(q, arrLength);
-            q++;
-            arrLength++;
-
-            String[] arrayStrings = this.arr.clone();
-
-            // int count = 0;
-
-            for (int i = 0; i < arrayStrings.length; i++) {
-                String arrString = arrayStrings[i];
-
-                int length = arrString.length(), a = 0;
-                int b = length;
-
-                // if (map.containsValue(arrString)) {
-                // break;
-                // }
-                // map.put(i, arrString);
-
-                for (int j = 0; j < arrayStrings.length; j++) {
-                    String firstStr = subString.substring(a, b);
-
-                    if (firstStr.equals(arrString)) {
-                        arrayStrings[i] = "";
-                        break;
-                    }
-                    a += length;
-                    b += length;
-                }
-
+        while (q < allocatedSpace) {
+            // this gets the frequency of word in the array of strings
+            strArr = new String[allocatedSpace];
+            while (r < allo) {
+                String subString = ss.substring(r, pp);
+                strArr[r] = subString;
+                r++;
+                pp++;
             }
-            boolean isEmptyStrings = true;
-            for (int p = 0; p < arrayStrings.length; p++) {
-                if (arrayStrings[p] != "") {
-                    isEmptyStrings = false;
-                    break;
-                } else {
-                    isEmptyStrings = true;
-                }
+            for (String w : strArr) {
+                map3.put(w, map3.getOrDefault(w, 0) + 1);
             }
-            if (!isEmptyStrings) {
-                continue;
-            } else {
-                // count++;
-                // idx = new int[count];
-                int index = this.s.indexOf(subString, s);
-                s++;
-                arrayList.add(index);
-                // idx[trackIdx] = index;
-                // trackIdx++;
-                System.out.println(ss.indexOf(subString, index));
-                arrayStrings = this.arr.clone();
+            for (String word : this.arr) {
+                map2.put(word, map2.getOrDefault(word, 0) + 1);
             }
+
         }
         return arrayList;
-        // return Arrays.toString(resIdx);
     }
 
     public static void main(String[] args) {
@@ -131,22 +90,39 @@ public class Str_SubstringOfAllConcatenation {
         String[] sArr1 = { "bar", "foo", "the" };
         String s2 = "barfoothefoobarman";
         String[] words2 = { "foo", "bar" };
+        String w = "wordgoodgoodgoodbestword";
+        String[] wArr = { "word", "good", "best", "good" };
 
         Str_SubstringOfAllConcatenation substr = new Str_SubstringOfAllConcatenation(s, sArr);
         Str_SubstringOfAllConcatenation substr1 = new Str_SubstringOfAllConcatenation(s1, sArr1);
         Str_SubstringOfAllConcatenation substr2 = new Str_SubstringOfAllConcatenation(ss, words);
         Str_SubstringOfAllConcatenation substr3 = new Str_SubstringOfAllConcatenation(s2, words2);
-        // Str_SubstringOfAllConcatenation substr1 = new
-        // Str_SubstringOfAllConcatenation(ss, words);
-        // System.out.println(substr.subOfAllConcat());
+        Str_SubstringOfAllConcatenation substr4 = new Str_SubstringOfAllConcatenation(w, wArr);
+
+        System.out.println(substr.subOfAllConcat());
         System.out.println("..........................................");
         System.out.println(substr1.subOfAllConcat());
 
         System.out.println("..........................................");
         System.out.println(substr2.subOfAllConcat());
 
-        // System.out.println("..........................................");
-        // System.out.println(substr3.subOfAllConcat());
+        System.out.println("..........................................");
+        System.out.println(substr3.subOfAllConcat());
+
+        System.out.println("..........................................");
+        System.out.println(substr4.subOfAllConcat());
 
     }
 }
+/**
+ * CODE EXPLANATION
+ * 1. I found all subarray occurences in the string which are of length N.
+ * ==>>>"barfoothefoobarman"
+ * 
+ * "N" is the length the concatenation of the array of strings
+ * { "foo", "bar" } => "foobar" => 6
+ * 
+ * 2. So at each subarray "barfoo", we get the substring of length ("foo")
+ * in the string array
+ * 
+ */

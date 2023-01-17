@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 public class Advanced_Java_Techniques {
@@ -14,5 +16,16 @@ public class Advanced_Java_Techniques {
         System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(b));
 
+        String[] words = { "foo", "bar", "foo", "foo" };
+        wordFrequency(words);
+
+    }
+
+    static void wordFrequency(String[] words) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String word : words) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
+        }
+        System.out.println(map);
     }
 }

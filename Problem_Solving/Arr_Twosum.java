@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Arr_TwoSum {
+public class Arr_Twosum {
 
     // [2, 4, 1, 3, 0, -2], target = 2,
     // find two numbers when added sum up to target.
@@ -26,5 +26,4 @@ public class Arr_TwoSum {
 
     }
 
-    
 }
