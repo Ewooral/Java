@@ -1,6 +1,6 @@
 # Install multiple java jdks and switch between them in linux
-    https://towardsdatascience.com/install-and-run-multiple-java-versions-on-linux-using-sdkman-858571bce6cf
-
+    https://towardsdatascience.com/install-and-run-multiple-java-versions-on-linux-using-sdkman-858571bce6cf 
+ 
 
 # There are three types of variables in Java:
 
@@ -43,7 +43,6 @@ public class VariableTypes1 {
 }
 
 ```
-
 
 # There are two major classes of variables or data types in Java. Primitive type and Objects
   
