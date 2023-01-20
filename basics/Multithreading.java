@@ -8,5 +8,18 @@ public class Multithreading {
             newThread.start();
         }
 
+        AnotherWayofUsingMultithreading anotherWayOfThreading = new AnotherWayofUsingMultithreading();
+        Thread myThread = new Thread(anotherWayOfThreading);
+        myThread.start();
+
     }
+}
+
+class AnotherWayofUsingMultithreading implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println("God is Good!");
+    }
+
 }
