@@ -66,6 +66,8 @@ public class LinkedList<T> {
         lList.printLinkedList(lList);
         System.out.println("..............");
 
+        LinkedList<String> sList = new LinkedList<>();
+
     }
 
 }
