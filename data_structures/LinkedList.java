@@ -67,6 +67,12 @@ public class LinkedList<T> {
         System.out.println("..............");
 
         LinkedList<String> sList = new LinkedList<>();
+        sList.insert(sList, "null");
+        sList.insert(sList, "Emma");
+        sList.insert(sList, "Mary");
+        sList.insert(sList, "Elisha");
+        sList.insert(sList, "David");
+        sList.printLinkedList(sList);
 
     }
 
