@@ -56,6 +56,25 @@ public class LinkedList<T> {
         return list;
     }
 
+    // **************TRAVERSAL**************
+
+    // Method to print the LinkedList.
+    public void (LinkedList<T> list) {
+        Node<T> currNode = list.head;
+
+        System.out.print("\nLinkedList: ");
+
+        // Traverse through the LinkedList
+        while (currNode != null) {
+            // Print the data at current node
+            System.out.print(currNode.data + " ");
+
+            // Go to next node
+            currNode = currNode.next;
+        }
+        System.out.println("\n");
+    }
+
     public static void main(String[] args) {
 
         LinkedList<Integer> lList = new LinkedList<>();
