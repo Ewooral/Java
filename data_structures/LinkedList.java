@@ -59,10 +59,12 @@ public class LinkedList<T> {
     public static void main(String[] args) {
 
         LinkedList<Integer> lList = new LinkedList<>();
+
         lList.insert(lList, 23);
         lList.insert(lList, -9);
         lList.insert(lList, 1);
         lList.printLinkedList(lList);
+        System.out.println("..............");
 
     }
 
