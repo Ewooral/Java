@@ -59,7 +59,7 @@ public class LinkedList<T> {
     // **************TRAVERSAL**************
 
     // Method to print the LinkedList.
-    public void (LinkedList<T> list) {
+    public void justPrint(LinkedList<T> list) {
         Node<T> currNode = list.head;
 
         System.out.print("\nLinkedList: ");
