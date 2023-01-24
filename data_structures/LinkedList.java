@@ -91,7 +91,7 @@ public class LinkedList<T> {
         sList.insert(sList, "Mary");
         sList.insert(sList, "Elisha");
         sList.insert(sList, "David");
-        sList.printLinkedList(sList);
+        sList.justPrint(sList);
 
     }
 
