@@ -80,6 +80,46 @@ public class LinkedList<T> {
             // Return the updated List
             return list;
         }
+
+        //
+        // CASE 2:
+        // If the key is somewhere other than at head
+        //
+
+        // Search for the key to be deleted,
+        // keep track of the previous node
+        // as it is needed to change currNode.next
+        while (currNode != null && currNode.data != key) {
+            // If currNode does not hold key
+            // continue to next node
+            prev = currNode;
+            currNode = currNode.next;
+        }
+
+        // If the key was present, it should be at currNode
+        // Therefore the currNode shall not be null
+        if (currNode != null) {
+            // Since the key is at currNode
+            // Unlink currNode from linked list
+            prev.next = currNode.next;
+
+            // Display the message
+            System.out.println(key + " found and deleted");
+        }
+
+        //
+        // CASE 3: The key is not present
+        //
+
+        // If key was not present in linked list
+        // currNode should be null
+        if (currNode == null) {
+            // Display the message
+            System.out.println(key + " not found");
+        }
+
+        // return the List
+        return list;
     }
 
     public static void main(String[] args) {
