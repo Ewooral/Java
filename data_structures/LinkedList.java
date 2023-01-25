@@ -131,6 +131,8 @@ public class LinkedList<T> {
         lList.insert(lList, 1);
         lList.printLinkedList(lList);
         System.out.println("..............");
+        lList.deleteByKey(lList, 23);
+        lList.printLinkedList(lList);
 
         LinkedList<String> sList = new LinkedList<>();
         sList.insert(sList, "Dick and Gee");
