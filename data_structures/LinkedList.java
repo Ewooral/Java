@@ -17,6 +17,9 @@ public class LinkedList<T> {
         this.tail = null;
     }
 
+    // **************TRAVERSAL**************
+
+    // Method to print the LinkedList.
     public void printLinkedList(LinkedList<T> list) {
         Node<T> curNode = list.head;
         while (curNode != null) {
@@ -56,23 +59,27 @@ public class LinkedList<T> {
         return list;
     }
 
-    // **************TRAVERSAL**************
+    // **************DELETION BY KEY**************
 
-    // Method to print the LinkedList.
-    public void justPrint(LinkedList<T> list) {
-        Node<T> currNode = list.head;
+    // Method to delete a node in the LinkedList by KEY
+    public LinkedList<T> deleteByKey(LinkedList<T> list,
+            T key) {
+        // Store head node
+        Node<T> currNode = list.head, prev = null;
 
-        System.out.print("\nLinkedList: ");
+        //
+        // CASE 1:
+        // If head node itself holds the key to be deleted
 
-        // Traverse through the LinkedList
-        while (currNode != null) {
-            // Print the data at current node
-            System.out.print(currNode.data + " ");
+        if (currNode != null && currNode.data == key) {
+            list.head = currNode.next; // Changed head
 
-            // Go to next node
-            currNode = currNode.next;
+            // Display the message
+            System.out.println(key + " found and deleted");
+
+            // Return the updated List
+            return list;
         }
-        System.out.println("\n");
     }
 
     public static void main(String[] args) {
@@ -91,7 +98,8 @@ public class LinkedList<T> {
         sList.insert(sList, "Mary");
         sList.insert(sList, "Elisha");
         sList.insert(sList, "David");
-        sList.justPrint(sList);
+        sList.printLinkedList(sList);
+        System.out.println("..............");
 
     }
 
