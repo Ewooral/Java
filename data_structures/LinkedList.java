@@ -24,9 +24,9 @@ public class LinkedList<T> {
         Node<T> curNode = list.head;
         while (curNode != null) {
             System.out.print("|" + curNode.data + "|");
-            if (curNode.next != null) {
-                System.out.print("-->");
-            }
+            // if (curNode.next != null) {
+            System.out.print("-->");
+            // }
             curNode = curNode.next;
 
         }
