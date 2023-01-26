@@ -122,6 +122,78 @@ public class LinkedList<T> {
         return list;
     }
 
+    // **************DELETION AT A POSITION**************
+
+    // Method to delete a node in the LinkedList by POSITION
+    public LinkedList<T> deleteAtPosition(LinkedList<T> list, int index) {
+        // Store head node
+        Node<T> currNode = list.head, prev = null;
+
+        //
+        // CASE 1:
+        // If index is 0, then head node itself is to be
+        // deleted
+
+        if (index == 0 && currNode != null) {
+            list.head = currNode.next; // Changed head
+
+            // Display the message
+            System.out.println(
+                    index + " position element deleted");
+
+            // Return the updated List
+            return list;
+        }
+
+        //
+        // CASE 2:
+        // If the index is greater than 0 but less than the
+        // size of LinkedList
+        //
+        // The counter
+        int counter = 0;
+
+        // Count for the index to be deleted,
+        // keep track of the previous node
+        // as it is needed to change currNode.next
+        while (currNode != null) {
+
+            if (counter == index) {
+                // Since the currNode is the required
+                // position Unlink currNode from linked list
+                prev.next = currNode.next;
+
+                // Display the message
+                System.out.println(
+                        index + " position element deleted");
+                break;
+            } else {
+                // If current position is not the index
+                // continue to next node
+                prev = currNode;
+                currNode = currNode.next;
+                counter++;
+            }
+        }
+
+        // If the position element was found, it should be
+        // at currNode Therefore the currNode shall not be
+        // null
+        //
+        // CASE 3: The index is greater than the size of the
+        // LinkedList
+        //
+        // In this case, the currNode should be null
+        if (currNode == null) {
+            // Display the message
+            System.out.println(
+                    index + " position element not found");
+        }
+
+        // return the List
+        return list;
+    }
+
     public static void main(String[] args) {
 
         LinkedList<Integer> lList = new LinkedList<>();
