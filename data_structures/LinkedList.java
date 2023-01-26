@@ -215,7 +215,7 @@ public class LinkedList<T> {
         sList.printLinkedList(sList);
         System.out.println("..............");
 
-        sList.deleteAtPosition(sList, 0);
+        sList.deleteAtPosition(sList, 2);
         sList.printLinkedList(sList);
 
     }
