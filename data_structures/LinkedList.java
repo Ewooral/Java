@@ -104,7 +104,7 @@ public class LinkedList<T> {
             prev.next = currNode.next;
 
             // Display the message
-            // System.out.println(key + " found and deleted");
+            System.out.println(key + " found and deleted");
         }
 
         //
