@@ -8,7 +8,7 @@ class Node<T> {
     }
 }
 
-// public class LinkedList<T> {
+public class LinkedList<T> {
     public Node<T> head;
     public Node<T> tail;
 
