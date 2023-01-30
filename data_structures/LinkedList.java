@@ -4,7 +4,7 @@ class Node<T> {
 
     public Node(T Data) {
         this.data = Data;
-        next = null;
+        // next = null;
     }
 }
 
