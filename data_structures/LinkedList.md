@@ -4,18 +4,18 @@ import java.io.*;
 // a Singly Linked List
 public class LinkedList {
 
-Node head; // head of list
+_Node head; // head of list
 
-// Linked list Node.
-// Node is a static nested class
+// Linked list _Node.
+// _Node is a static nested class
 // so main() can access it
-static class Node {
+static class _Node {
 
 int data;
-Node next;
+_Node next;
 
 // Constructor
-Node(int d)
+_Node(int d)
 {
     data = d;
     next = null;
@@ -28,7 +28,7 @@ Node(int d)
 public static LinkedList insert(LinkedList list, int data)
 {
 // Create a new node with given data
-Node new_node = new Node(data);
+_Node new_node = new _Node(data);
 new_node.next = null;
 
 // If the Linked List is empty,
@@ -39,7 +39,7 @@ if (list.head == null) {
 else {
     // Else traverse till the last node
     // and insert the new_node there
-    Node last = list.head;
+    _Node last = list.head;
     while (last.next != null) {
         last = last.next;
     }
@@ -58,7 +58,7 @@ return list;
 
 public static void printList(LinkedList list)
 {
-Node currNode = list.head;
+_Node currNode = list.head;
 
 System.out.print("LinkedList: ");
 
@@ -83,7 +83,7 @@ public static LinkedList deleteByKey(LinkedList list,
                                 int key)
 {
 // Store head node
-Node currNode = list.head, prev = null;
+_Node currNode = list.head, prev = null;
 
 //
 // CASE 1:
@@ -202,18 +202,18 @@ import java.io.*;
 // a Singly Linked List
 public class LinkedList {
 
-	Node head; // head of list
+	_Node head; // head of list
 
-	// Linked list Node.
-	// Node is a static nested class
+	// Linked list _Node.
+	// _Node is a static nested class
 	// so main() can access it
-	static class Node {
+	static class _Node {
 
 		int data;
-		Node next;
+		_Node next;
 
 		// Constructor
-		Node(int d)
+		_Node(int d)
 		{
 			data = d;
 			next = null;
@@ -227,7 +227,7 @@ public class LinkedList {
 									int data)
 	{
 		// Create a new node with given data
-		Node new_node = new Node(data);
+		_Node new_node = new _Node(data);
 		new_node.next = null;
 
 		// If the Linked List is empty,
@@ -238,7 +238,7 @@ public class LinkedList {
 		else {
 			// Else traverse till the last node
 			// and insert the new_node there
-			Node last = list.head;
+			_Node last = list.head;
 			while (last.next != null) {
 				last = last.next;
 			}
@@ -256,7 +256,7 @@ public class LinkedList {
 	// Method to print the LinkedList.
 	public static void printList(LinkedList list)
 	{
-		Node currNode = list.head;
+		_Node currNode = list.head;
 
 		System.out.print("\nLinkedList: ");
 
@@ -278,7 +278,7 @@ public class LinkedList {
 										int key)
 	{
 		// Store head node
-		Node currNode = list.head, prev = null;
+		_Node currNode = list.head, prev = null;
 
 		//
 		// CASE 1:
@@ -342,7 +342,7 @@ public class LinkedList {
 	deleteAtPosition(LinkedList list, int index)
 	{
 		// Store head node
-		Node currNode = list.head, prev = null;
+		_Node currNode = list.head, prev = null;
 
 		//
 		// CASE 1:
