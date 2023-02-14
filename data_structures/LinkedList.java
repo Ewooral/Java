@@ -1,6 +1,6 @@
 class Node<T> {
     public T data;
-    public Node<T> next;
+    public Node<T> next; 
 
     public Node(T Data) {
         this.data = Data;
@@ -25,7 +25,7 @@ public class LinkedList<T> {
         while (curNode != null) {
             System.out.print("|" + curNode.data + "|");
             if (curNode.next != null) {
-                System.out.print("-->");
+                System.out.print("...");
             }
             curNode = curNode.next;
 
