@@ -1,3 +1,5 @@
+package data_structures;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -56,7 +58,7 @@ public class Stacks_Queues {
         arr.add(num);
         int i = 0;
         int j = arr.size() - 1;
-        while (i < j && arr.size() > 1) {
+        while (i < j) {
             int begin = arr.get(i);
             int end = arr.get(j);
             arr.set(i, end);
@@ -84,9 +86,8 @@ public class Stacks_Queues {
 
     // Traverse arr
     public void traverse() {
-        Iterator<Integer> I = arr.iterator();
-        while (I.hasNext()) {
-            System.out.print(I.next() + ", ");
+        for (Integer integer : arr) {
+            System.out.print(integer + ", ");
         }
     }
 
