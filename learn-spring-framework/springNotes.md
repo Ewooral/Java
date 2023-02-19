@@ -7,3 +7,18 @@ Coupling is important everywhere
       `tightly coupled` to a specific place
     * A computer made up of a monitor, system unit, keyboard and mouse
       is a bit difficult to move. 
+
+# Wiring of Dependencies
+in the game class example, the `game` object is a dependency of the GameRunner class
+so the game object is created and is wired into the GameRunner class.
+
+    PackManGame game = new PackManGame();
+    var gameRunner = new GameRunner(game); // wired
+
+
+# SPRING FRAMEWORK
+
+Things managed by spring are called spring `beans`
+To start a spring app:
+1.  Launch a Spring Context
+2. Configure the things that we want Spring to manage - @Configuration class
