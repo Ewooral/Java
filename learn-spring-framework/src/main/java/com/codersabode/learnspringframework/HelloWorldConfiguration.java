@@ -29,14 +29,12 @@ public class HelloWorldConfiguration {
     }
 
     @Bean
-    public int person(){
-        Person firstPerson = new Person("Elijah", 30);
-        return firstPerson.age();
+    public Person person(){
+        return new Person("Elijah", 30);
     }
 
     @Bean
-    public String address(){
-        Address address = new Address("Tema", 20338501-9);
-        return address.City();
+    public Address address(){
+        return new Address("Tema", 20338501-9);
     }
 }
