@@ -32,4 +32,9 @@ public class HelloWorldConfiguration {
         Person firstPerson = new Person("Elijah", 30);
         return firstPerson.age();
     }
+
+    @Bean
+    public String address(){
+        return "Ashaiman cop, GH";
+    }
 }
