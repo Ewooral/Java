@@ -34,7 +34,7 @@ public class HelloWorldConfiguration {
     }
 
     // a bean name can be configured/ customized for one's own needs
-    @Bean
+    @Bean(name = "address_two")
     public Address address(){
         return new Address("Tema", 20338501-9);
     }
