@@ -33,6 +33,7 @@ public class HelloWorldConfiguration {
         return new Person("Elijah", 30);
     }
 
+    // a bean name can be configured/ customized for one's own needs
     @Bean
     public Address address(){
         return new Address("Tema", 20338501-9);
