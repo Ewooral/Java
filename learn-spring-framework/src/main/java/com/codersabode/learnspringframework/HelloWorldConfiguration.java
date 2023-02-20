@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 record Person(String name, int age){};
-record Address(String City, int zipcode){}
+record Address(String City, int zipcode){};
 @Configuration
 public class HelloWorldConfiguration {
 
@@ -36,6 +36,7 @@ public class HelloWorldConfiguration {
 
     @Bean
     public String address(){
-        return "Ashaiman cop, GH";
+        Address address = new Address("Tema", 20338501-9);
+        return address.City();
     }
 }
