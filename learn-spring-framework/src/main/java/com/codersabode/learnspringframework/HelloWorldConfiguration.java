@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 record Person(String name, int age){};
+record Address(){}
 @Configuration
 public class HelloWorldConfiguration {
 
