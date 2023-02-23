@@ -32,6 +32,10 @@ public class HelloWorldConfiguration {
     public Person person(){
         return new Person("Elijah", 30);
     }
+    @Bean
+    public Person person2(){
+        return new Person("Elijah", 30);
+    }
 
     // a bean name can be configured/ customized for one's own needs
     @Bean(name = "addressII")
