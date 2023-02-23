@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
    constructor and parameters are automatically created.
  */
 
-record Person(String name, int age){};
-record Address(String City, int zipcode){};
+record Person(String name, int age, Address address){};
+record Address(String City){};
 @Configuration
 public class HelloWorldConfiguration {
 
@@ -30,7 +30,7 @@ public class HelloWorldConfiguration {
 
     @Bean
     public Person person(){
-        return new Person("David", 30);
+        return new Person("David", 30, new Address("Russia Dansoman"));
     }
     @Bean
     // using method calls
@@ -41,6 +41,6 @@ public class HelloWorldConfiguration {
     // a bean name can be configured/ customized for one's own needs
     @Bean(name = "addressII")
     public Address address(){
-        return new Address("Tema", 20338501-9);
+        return new Address("Tema");
     }
 }
