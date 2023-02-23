@@ -33,8 +33,9 @@ public class HelloWorldConfiguration {
         return new Person("Elijah", 30);
     }
     @Bean
+    // using method calls
     public Person person2(){
-        return new Person("Elijah", 30);
+        return new Person(name(), age());
     }
 
     // a bean name can be configured/ customized for one's own needs
