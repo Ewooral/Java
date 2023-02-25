@@ -40,7 +40,7 @@ public class HelloWorldConfiguration {
 
     @Bean
     public Person person3(){
-        return new Person(name())
+        return new Person(name(), age(), address());
     }
 
     // a bean name can be configured/ customized for one's own needs
