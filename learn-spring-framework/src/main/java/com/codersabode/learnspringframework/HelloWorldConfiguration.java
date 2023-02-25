@@ -39,7 +39,7 @@ public class HelloWorldConfiguration {
     }
 
     @Bean
-    public Person person3()
+    public Person person3(){}
 
     // a bean name can be configured/ customized for one's own needs
     @Bean(name = "addressII")
