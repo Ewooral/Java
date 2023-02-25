@@ -39,8 +39,8 @@ public class HelloWorldConfiguration {
     }
 
     @Bean
-    public Person person3(){
-        return new Person(name(), age(), address());
+    public Person person3Parameters( String name, int age, Address addressII){// name, age, addressII
+        return new Person(name, age, addressII);
     }
 
     // a bean name can be configured/ customized for one's own needs
