@@ -38,6 +38,9 @@ public class HelloWorldConfiguration {
         return new Person(name(), age(), address());
     }
 
+    @Bean
+
+
     // a bean name can be configured/ customized for one's own needs
     @Bean(name = "addressII")
     public Address address(){
