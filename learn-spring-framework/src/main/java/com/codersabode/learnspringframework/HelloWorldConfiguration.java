@@ -51,6 +51,6 @@ public class HelloWorldConfiguration {
 
     @Bean(name = "addressIII")
     public Address addressIII(){
-        return new Address("Helsinki");
+//        return new Address("Helsinki");
     }
 }
