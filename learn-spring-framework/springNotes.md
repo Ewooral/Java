@@ -22,3 +22,7 @@ Things managed by spring are called spring `beans`
 To start a spring app:
 1.  Launch a Spring Context
 2. Configure the things that we want Spring to manage - @Configuration class
+
+
+# Spring Container
+Manages spring beans and their lifecycle
