@@ -28,3 +28,7 @@ To start a spring app:
 Manages spring beans and their lifecycle
 
 - Bean Factory: Basic Spring container
+- Application Context: Advanced spring container with enterprise-specific
+   features.
+     
+      
