@@ -34,3 +34,6 @@ Manages spring beans and their lifecycle
       1. Easy to use in web applications
       2. Easy internationalization
       3. Easy integration with Spring AOP
+
+- Which one to use? Most enterprise apps use Application Context
+   Recommended for web apps, web services - REST API and microservices
