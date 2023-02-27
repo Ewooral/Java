@@ -33,3 +33,4 @@ Manages spring beans and their lifecycle
      
       1. Easy to use in web applications
       2. Easy internationalization
+      3. Easy integration with Spring AOP
