@@ -53,4 +53,8 @@ public class HelloWorldConfiguration {
     public Address addressIII(){
         return new Address("Helsinki");
     }
+    @Bean
+    public int schoolID(){
+        return 20338501;
+    }
 }
