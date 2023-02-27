@@ -31,4 +31,5 @@ Manages spring beans and their lifecycle
 - Application Context: Advanced spring container with enterprise-specific
    features.
      
-      
+      1. Easy to use in web applications
+      2. Easy internationalization
