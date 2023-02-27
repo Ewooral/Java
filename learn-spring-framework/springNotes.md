@@ -26,3 +26,5 @@ To start a spring app:
 
 # Spring Container
 Manages spring beans and their lifecycle
+
+- Bean Factory: Basic Spring container
