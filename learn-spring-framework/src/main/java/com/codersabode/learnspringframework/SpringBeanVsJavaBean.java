@@ -1,5 +1,7 @@
 package com.codersabode.learnspringframework;
 
+import java.io.Serializable;
+
 public class SpringBeanVsJavaBean {
     public static void main(String[] args) {
         Pojo pojo = new Pojo();
@@ -19,7 +21,7 @@ public String toString(){
 }
 
 // EJB enterprise java beans
-class JavaBean {
+class JavaBean implements Serializable {
 
     // EJB has no argument constructor
     public JavaBean(){
@@ -44,4 +46,9 @@ class JavaBean {
     public int getNumber(){
         return this.number;
     }
+
+    /* implement a serializable
+    Note that if you have a class that has all the above properties
+    then an instance of the class becomes a java bean
+    */
 }

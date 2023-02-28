@@ -37,3 +37,18 @@ Manages spring beans and their lifecycle
 
 - Which one to use? Most enterprise apps use Application Context
    Recommended for web apps, web services - REST API and microservices
+
+
+# Java Bean vs POJO vs Spring Bean
+
+1. Java Bean: Classes adhering to 3 constraints
+    - Have public default constructors with no arguments
+    - Allow access to their properties using getters and setters methods
+    - Implement java.io.Serializable
+
+2. POJO: Plain Old Java Object
+    - has no constraints
+    - Any java object is a POJO
+
+3. Spring Bean: Any java object managed by a spring
+    - uses IOC container(Bean Factory or Application context) to manage these objects
