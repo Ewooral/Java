@@ -7,7 +7,8 @@ public class SpringBeanVsJavaBean {
     }
 }
 
-class Pojo{ // Pojo means plain old java object
+// Pojo means plain old java object
+class Pojo{
 private String text;
 private int number;
 
@@ -15,4 +16,15 @@ public String toString(){
     return text + ":" + number;
 }
 
+}
+
+// EJB enterprise java beans
+class JavaBean {
+
+    // EJB has no argument constructor
+    public JavaBean(){
+
+    }
+    private String text;
+    private int number;
 }
