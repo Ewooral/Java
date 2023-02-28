@@ -27,4 +27,21 @@ class JavaBean {
     }
     private String text;
     private int number;
+
+    // have getters and setters
+    public void setText(String Text){
+        this.text = Text;
+    }
+
+    public String getText(){
+        return this.text;
+    }
+
+    public void setNumber(int num){
+        this.number = num;
+    }
+
+    public int getNumber(){
+        return this.number;
+    }
 }
