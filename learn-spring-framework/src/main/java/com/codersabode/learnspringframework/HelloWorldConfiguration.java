@@ -54,7 +54,7 @@ public class HelloWorldConfiguration {
         return new Address("Helsinki");
     }
     @Bean
-    public int schoolID(){
+    public int school_id(){
         return 20338501;
     }
 }
