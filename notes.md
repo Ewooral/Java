@@ -10,7 +10,7 @@ In Java, an `interface` is a `blueprint` for a class.
 
     It defines a set of methods that a class must implement, but does not provide any implementation
     for these methods. An interface is defined using the interface keyword, and it can contain only
-    method declarations and constant variables.
+    method declarations and constant variables. A class implements an interface and gives meaning to the methods define by the interface
 
 ## Class
 
