@@ -63,6 +63,6 @@ public class HelloWorldConfiguration {
 
     @Bean
     public PlaceOfWork placeOfWork(){
-        PlaceOfWork placeOfWork = new PlaceOfWork("")
+        PlaceOfWork placeOfWork = new PlaceOfWork("Google", 10980)
     }
 }
