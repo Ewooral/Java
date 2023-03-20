@@ -3,6 +3,7 @@ package com.codersabode.learnspringframework;
 public class GameRunner {
     private final GamingConsole game;
     MarioGame marioGame = new MarioGame();
+    PackManGame packManGame;
 
 
     public GameRunner(GamingConsole game){
@@ -16,6 +17,9 @@ public class GameRunner {
         game.right();
         System.out.println(".......");
         marioGame.up();
+
+        System.out.println(".......");
+        packManGame.down();
 
     }
 }
