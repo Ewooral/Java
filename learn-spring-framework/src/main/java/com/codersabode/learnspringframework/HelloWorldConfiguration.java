@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Configuration;
 
 /* A record is a new functionality introduced in jdk 16.
    constructor and parameters are automatically created.
+   A record does not need a constructor, setter or getter unlike a
+   class that needs all of that.
  */
 
 record Person(String name, int age, Address address){};
