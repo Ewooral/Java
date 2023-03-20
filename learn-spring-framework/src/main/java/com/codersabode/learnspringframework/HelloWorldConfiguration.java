@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 record Person(String name, int age, Address address){};
 record Address(String City){};
+record PlaceOfWork(String name, int areaCode){};
 @Configuration
 public class HelloWorldConfiguration {
 
@@ -58,5 +59,10 @@ public class HelloWorldConfiguration {
     @Bean
     public int school_id(){
         return 20338501;
+    }
+
+    @Bean
+    public PlaceOfWork placeOfWork(){
+        PlaceOfWork placeOfWork = new PlaceOfWork("")
     }
 }
