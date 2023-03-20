@@ -2,6 +2,8 @@ package com.codersabode.learnspringframework;
 
 public class GameRunner {
     private final GamingConsole game;
+    MarioGame marioGame = new MarioGame();
+
 
     public GameRunner(GamingConsole game){
         this.game = game;
@@ -12,5 +14,8 @@ public class GameRunner {
         game.down();
         game.left();
         game.right();
+        System.out.println(".......");
+        marioGame.up();
+
     }
 }

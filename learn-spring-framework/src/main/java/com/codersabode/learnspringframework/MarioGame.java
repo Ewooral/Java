@@ -18,3 +18,4 @@ public class MarioGame implements GamingConsole{
         System.out.println("Accelerate");
     }
 }
+ 
