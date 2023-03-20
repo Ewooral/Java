@@ -3,7 +3,7 @@ package com.codersabode.learnspringframework;
 public class GameRunner {
     private final GamingConsole game;
     MarioGame marioGame = new MarioGame();
-    PackManGame packManGame;
+    PackManGame packManGame = new PackManGame();
 
 
     public GameRunner(GamingConsole game){
