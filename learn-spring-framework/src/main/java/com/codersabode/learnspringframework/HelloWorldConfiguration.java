@@ -38,12 +38,12 @@ public class HelloWorldConfiguration {
     @Bean
     // using method calls
     public Person person2(){
-        return new Person(name(), age(), address());
+        return new Person(name(), age(), address(), placeOfWork());
     }
 
     @Bean
-    public Person person3Parameters( String name, int age, Address addressIII){// name, age, addressII
-        return new Person(name, age, addressIII);
+    public Person person3Parameters( String name, int age, Address addressIII, PlaceOfWork myWorkPlace){
+        return new Person(name, age, addressIII, myWorkPlace);
     }
 
     // a bean name can be configured/ customized for one's own needs
@@ -65,9 +65,9 @@ public class HelloWorldConfiguration {
     public PlaceOfWork placeOfWork(){
         return new PlaceOfWork("Google", 10980);
     }
-     @Bean(name = "workPlace")
-    public PlaceOfWork placeOfWork1(){
-        return new PlaceOfWork("Bloomberg", 908882);
-    }
+//     @Bean
+//    public PlaceOfWork placeOfWork1(){
+//        return new PlaceOfWork("Bloomberg", 908882);
+//    }
 
 }

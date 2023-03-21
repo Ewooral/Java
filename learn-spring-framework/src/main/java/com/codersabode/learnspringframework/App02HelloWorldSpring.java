@@ -23,8 +23,8 @@ public class App02HelloWorldSpring {
         System.out.println(context.getBean("addressII"));
         System.out.println("School ID: " + context.getBean("school_id"));//  System.out.println(context.getBean(Address.class));
         System.out.println("Place of Work: " + context.getBean("placeOfWork"));
-        System.out.println("Place of Work: " + context.getBean("workPlace"));
         System.out.println("Place of Work: " + context.getBean(PlaceOfWork.class));
+
         // print all bean names
         Arrays.stream( context.getBeanDefinitionNames())
                 .forEach(System.out::println);
