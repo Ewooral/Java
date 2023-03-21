@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
    class that needs all of that.
  */
 
-record Person(String name, int age, Address address){};
+record Person(String name, int age, Address address, PlaceOfWork work){};
 record Address(String City){};
 record PlaceOfWork(String name, int areaCode){};
 @Configuration
@@ -65,4 +65,9 @@ public class HelloWorldConfiguration {
     public PlaceOfWork placeOfWork(){
         return new PlaceOfWork("Google", 10980);
     }
+     @Bean(name = "workPlace")
+    public PlaceOfWork placeOfWork1(){
+        return new PlaceOfWork("Bloomberg", 908882);
+    }
+
 }
