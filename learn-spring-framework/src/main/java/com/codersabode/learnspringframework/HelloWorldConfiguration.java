@@ -33,7 +33,7 @@ public class HelloWorldConfiguration {
 
     @Bean
     public Person person(){
-        return new Person("David", 30, new Address("Russia Dansoman"));
+        return new Person("David", 30, new Address("Russia Dansoman"), new PlaceOfWork("Meta", 88800));
     }
     @Bean
     // using method calls
