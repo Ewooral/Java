@@ -42,6 +42,7 @@ public class HelloWorldConfiguration {
     }
 
     @Bean
+    //using parameters
     public Person person3Parameters( String name, int age, Address addressIII, PlaceOfWork myWorkPlace){
         return new Person(name, age, addressIII, myWorkPlace);
     }
