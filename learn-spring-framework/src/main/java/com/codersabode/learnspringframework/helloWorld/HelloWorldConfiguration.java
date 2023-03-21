@@ -1,7 +1,8 @@
-package com.codersabode.learnspringframework;
+package com.codersabode.learnspringframework.helloWorld;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 
 /* A record is a new functionality introduced in jdk 16.
@@ -32,6 +33,7 @@ public class HelloWorldConfiguration {
     }
 
     @Bean
+    @Primary
     public Person person(){
         return new Person("David", 30, new Address("Russia Dansoman"), new PlaceOfWork("Meta", 88800));
     }
@@ -43,7 +45,7 @@ public class HelloWorldConfiguration {
 
     @Bean
     //using parameters
-    public Person person3Parameters( String name, int age, Address addressIII, PlaceOfWork myWorkPlace){
+    public Person person3Parameters(String name, int age, Address addressIII, PlaceOfWork myWorkPlace){
         return new Person(name, age, addressIII, myWorkPlace);
     }
 
@@ -66,9 +68,11 @@ public class HelloWorldConfiguration {
     public PlaceOfWork placeOfWork(){
         return new PlaceOfWork("Google", 10980);
     }
-//     @Bean
-//    public PlaceOfWork placeOfWork1(){
-//        return new PlaceOfWork("Bloomberg", 908882);
-//    }
+     @Bean
+
+     @Primary
+    public PlaceOfWork placeOfWork1(){
+        return new PlaceOfWork("Bloomberg", 908882);
+    }
 
 }

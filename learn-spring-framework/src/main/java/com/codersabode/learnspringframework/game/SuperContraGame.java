@@ -1,4 +1,6 @@
-package com.codersabode.learnspringframework;
+package com.codersabode.learnspringframework.game;
+
+import com.codersabode.learnspringframework.game.GamingConsole;
 
 public class SuperContraGame implements GamingConsole {
 
