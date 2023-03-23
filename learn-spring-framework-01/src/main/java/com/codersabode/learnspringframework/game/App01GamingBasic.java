@@ -9,6 +9,7 @@ public class App01GamingBasic {
 
         // object creation + wiring of dependencies
         var gameRunner = new GameRunner(game);
-        gameRunner.run();
+//        gameRunner.run();
+
     }
 }
