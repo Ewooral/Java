@@ -36,7 +36,7 @@ public class VariableTypes1 {
 
     public static void main(String[] args) {
         int data = 50; // instance variable
-        System.out.println(data);
+        // System.out.println(data);
         System.out.println(m);
         method();
     }
