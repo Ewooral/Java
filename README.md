@@ -27,7 +27,7 @@ A variable that is declared as static is called a static variable. It cannot be 
 ``` java
 
 public class VariableTypes1 {
-    static int m = 100;// static variable 
+    // static int m = 100;// static variable 
 
     static void method() {
         int num = 90; // local variable
