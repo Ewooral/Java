@@ -29,7 +29,7 @@ A variable that is declared as static is called a static variable. It cannot be 
 public class VariableTypes1 {
     static int m = 100;// static variable 
 
-    static void method() {
+    // static void method() {
         int num = 90; // local variable
         System.out.println(num);
     }
