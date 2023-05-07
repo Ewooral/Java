@@ -31,7 +31,7 @@ public class VariableTypes1 {
 
     static void method() {
         int num = 90; // local variable
-        System.out.println(num);
+        // System.out.println(num);
     }
 
     public static void main(String[] args) {
