@@ -42,7 +42,7 @@ public class Str_SubstringOfAllConcatenation {
     private String s;
     private String[] arr;
     private List<Integer> arrayList = new ArrayList<>();
-    private HashMap<Integer, String> map = new HashMap<>();
+    // private HashMap<Integer, String> map = new HashMap<>();
     private HashMap<String, Integer> map2 = new HashMap<>();
     private HashMap<String, Integer> map3 = new HashMap<>();
     private String[] strArr;
@@ -60,7 +60,7 @@ public class Str_SubstringOfAllConcatenation {
         int allocatedSpace = ss.length() + 1 - m;
         int allo = allocatedSpace;
         int q = 0, r = 0;
-        int s = 0;
+        // int s = 0;
         while (q < allocatedSpace) {
             // this gets the frequency of word in the array of strings
             strArr = new String[allocatedSpace];
