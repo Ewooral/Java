@@ -1,9 +1,7 @@
 /**
  * 2466. Count Ways To Build Good Strings
  * Medium
- * 1.3K
- * 124
- * Companies
+ *
  * 
  * Given the integers zero, one, low, and high, we can construct a string by
  * starting with an empty string, and then at each step perform either of the
