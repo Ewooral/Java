@@ -48,7 +48,7 @@
 
 public class Str_BuildStrings {
     private int low;
-    public int high;
+    private int high;
     public int zero;
     public int one;
 
