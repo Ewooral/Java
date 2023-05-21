@@ -50,7 +50,7 @@ public class Str_BuildStrings {
     private int low;
     private int high;
     private int zero;
-    public int one;
+    private int one;
 
     public Str_BuildStrings() {
 
