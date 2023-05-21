@@ -52,8 +52,10 @@ public class Str_BuildStrings {
     private int zero;
     private int one;
 
-    public Str_BuildStrings() {
-
+    public Str_BuildStrings(int Low, int High, int Zero, int One) {
+        this.high = High;
+        this.low = Low;
+        this.one = One;
     }
 
     public static void main(String[] args) {
