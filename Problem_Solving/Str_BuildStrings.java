@@ -49,7 +49,7 @@
 public class Str_BuildStrings {
     private int low;
     private int high;
-    public int zero;
+    private int zero;
     public int one;
 
     public Str_BuildStrings() {
