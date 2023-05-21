@@ -56,7 +56,7 @@ public class Str_BuildStrings {
         this.high = High;
         this.low = Low;
         this.one = One;
-        // this.zero = Zero;
+        this.zero = Zero;
     }
 
     public static void main(String[] args) {
