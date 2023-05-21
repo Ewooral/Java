@@ -47,6 +47,14 @@
  */
 
 public class Str_BuildStrings {
+    public int low;
+    public int high;
+    public int zero;
+    public int one;
+
+    public Str_BuildStrings() {
+
+    }
 
     public static void main(String[] args) {
 
