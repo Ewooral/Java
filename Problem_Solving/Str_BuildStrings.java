@@ -65,4 +65,8 @@ public class Str_BuildStrings {
 
     }
 
+    public static int BStrings() {
+
+    }
+
 }
