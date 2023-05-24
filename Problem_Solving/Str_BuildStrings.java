@@ -58,7 +58,7 @@ public class Str_BuildStrings {
 
     }
 
-    public int countGoodStrings(int low, int high, int zero, int one) {
+    public static int countGoodStrings(int low, int high, int zero, int one) {
         int[] dp = new int[high + 1];
         // dp[0] = 1;
         int md = 1000000007;
