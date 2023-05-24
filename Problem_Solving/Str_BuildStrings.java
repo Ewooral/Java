@@ -47,16 +47,9 @@
  */
 
 public class Str_BuildStrings {
-    private int low;
-    private int high;
-    private int zero;
-    private int one;
 
-    public Str_BuildStrings(int Low, int High, int Zero, int One) {
-        this.high = High;
-        this.low = Low;
-        this.one = One;
-        this.zero = Zero;
+    public Str_BuildStrings() {
+
     }
 
     public static void main(String[] args) {
