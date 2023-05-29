@@ -93,7 +93,7 @@ public class Str_BuildStrings {
         }
         int sum = 0;
         for (int i = low; i <= high; i++) {
-            // sum = (sum + dp[i]) % md;
+            sum = (sum + dp[i]) % md;
         }
         return sum;
     }
